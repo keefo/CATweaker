@@ -1,6 +1,6 @@
 # CATweaker
 
-![alt CATweaker](./AppIcon.png){ width: 200px; }
+<img src="./AppIcon.png" width="200" />
 
 A helper tool for tweaking CAMediaTimingFunction
 
