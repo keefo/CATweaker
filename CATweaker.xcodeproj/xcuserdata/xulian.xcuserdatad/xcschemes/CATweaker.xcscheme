@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "A74B92A91ABE5F2B00AB08CE"
-               BuildableName = "CAMediaTimingFunctionBuilder.app"
-               BlueprintName = "CAMediaTimingFunctionBuilder"
-               ReferencedContainer = "container:CAMediaTimingFunctionBuilder.xcodeproj">
+               BuildableName = "CATweaker.app"
+               BlueprintName = "CATweaker"
+               ReferencedContainer = "container:CATweaker.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
          <BuildActionEntry
@@ -29,9 +29,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "A74B92BC1ABE5F2B00AB08CE"
-               BuildableName = "CAMediaTimingFunctionBuilderTests.xctest"
-               BlueprintName = "CAMediaTimingFunctionBuilderTests"
-               ReferencedContainer = "container:CAMediaTimingFunctionBuilder.xcodeproj">
+               BuildableName = "CATweakerTests.xctest"
+               BlueprintName = "CATweakerTests"
+               ReferencedContainer = "container:CATweaker.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -47,9 +47,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "A74B92BC1ABE5F2B00AB08CE"
-               BuildableName = "CAMediaTimingFunctionBuilderTests.xctest"
-               BlueprintName = "CAMediaTimingFunctionBuilderTests"
-               ReferencedContainer = "container:CAMediaTimingFunctionBuilder.xcodeproj">
+               BuildableName = "CATweakerTests.xctest"
+               BlueprintName = "CATweakerTests"
+               ReferencedContainer = "container:CATweaker.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -57,9 +57,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "A74B92A91ABE5F2B00AB08CE"
-            BuildableName = "CAMediaTimingFunctionBuilder.app"
-            BlueprintName = "CAMediaTimingFunctionBuilder"
-            ReferencedContainer = "container:CAMediaTimingFunctionBuilder.xcodeproj">
+            BuildableName = "CATweaker.app"
+            BlueprintName = "CATweaker"
+            ReferencedContainer = "container:CATweaker.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </TestAction>
@@ -77,9 +77,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "A74B92A91ABE5F2B00AB08CE"
-            BuildableName = "CAMediaTimingFunctionBuilder.app"
-            BlueprintName = "CAMediaTimingFunctionBuilder"
-            ReferencedContainer = "container:CAMediaTimingFunctionBuilder.xcodeproj">
+            BuildableName = "CATweaker.app"
+            BlueprintName = "CATweaker"
+            ReferencedContainer = "container:CATweaker.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -96,9 +96,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "A74B92A91ABE5F2B00AB08CE"
-            BuildableName = "CAMediaTimingFunctionBuilder.app"
-            BlueprintName = "CAMediaTimingFunctionBuilder"
-            ReferencedContainer = "container:CAMediaTimingFunctionBuilder.xcodeproj">
+            BuildableName = "CATweaker.app"
+            BlueprintName = "CATweaker"
+            ReferencedContainer = "container:CATweaker.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

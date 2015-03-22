@@ -1,2 +1,2 @@
-# CAMediaTimingFunctionBuilder
-A helper tool for creating CAMediaTimingFunction
+# CATweaker
+A helper tool for tweaking CAMediaTimingFunction

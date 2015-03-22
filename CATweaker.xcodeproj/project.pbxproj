@@ -11,7 +11,7 @@
 		A74B92B31ABE5F2B00AB08CE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A74B92B21ABE5F2B00AB08CE /* main.m */; };
 		A74B92B51ABE5F2B00AB08CE /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A74B92B41ABE5F2B00AB08CE /* Images.xcassets */; };
 		A74B92B81ABE5F2B00AB08CE /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = A74B92B61ABE5F2B00AB08CE /* MainMenu.xib */; };
-		A74B92C41ABE5F2B00AB08CE /* CAMediaTimingFunctionBuilderTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A74B92C31ABE5F2B00AB08CE /* CAMediaTimingFunctionBuilderTests.m */; };
+		A74B92C41ABE5F2B00AB08CE /* CATweakerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A74B92C31ABE5F2B00AB08CE /* CATweakerTests.m */; };
 		A74B92CE1ABE5F9400AB08CE /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = A74B92CD1ABE5F9400AB08CE /* README.md */; };
 		A74B92D11ABE602900AB08CE /* CurveView.m in Sources */ = {isa = PBXBuildFile; fileRef = A74B92D01ABE602900AB08CE /* CurveView.m */; };
 /* End PBXBuildFile section */
@@ -27,16 +27,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		A74B92AA1ABE5F2B00AB08CE /* CAMediaTimingFunctionBuilder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CAMediaTimingFunctionBuilder.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A74B92AA1ABE5F2B00AB08CE /* CATweaker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CATweaker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A74B92AE1ABE5F2B00AB08CE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A74B92AF1ABE5F2B00AB08CE /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		A74B92B01ABE5F2B00AB08CE /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		A74B92B21ABE5F2B00AB08CE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		A74B92B41ABE5F2B00AB08CE /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		A74B92B71ABE5F2B00AB08CE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
-		A74B92BD1ABE5F2B00AB08CE /* CAMediaTimingFunctionBuilderTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CAMediaTimingFunctionBuilderTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A74B92BD1ABE5F2B00AB08CE /* CATweakerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CATweakerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A74B92C21ABE5F2B00AB08CE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A74B92C31ABE5F2B00AB08CE /* CAMediaTimingFunctionBuilderTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CAMediaTimingFunctionBuilderTests.m; sourceTree = "<group>"; };
+		A74B92C31ABE5F2B00AB08CE /* CATweakerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CATweakerTests.m; sourceTree = "<group>"; };
 		A74B92CD1ABE5F9400AB08CE /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
 		A74B92CF1ABE602900AB08CE /* CurveView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CurveView.h; sourceTree = "<group>"; };
 		A74B92D01ABE602900AB08CE /* CurveView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CurveView.m; sourceTree = "<group>"; };
@@ -63,8 +63,8 @@
 		A74B92A11ABE5F2B00AB08CE = {
 			isa = PBXGroup;
 			children = (
-				A74B92AC1ABE5F2B00AB08CE /* CAMediaTimingFunctionBuilder */,
-				A74B92C01ABE5F2B00AB08CE /* CAMediaTimingFunctionBuilderTests */,
+				A74B92AC1ABE5F2B00AB08CE /* CATweaker */,
+				A74B92C01ABE5F2B00AB08CE /* CATweakerTests */,
 				A74B92AB1ABE5F2B00AB08CE /* Products */,
 			);
 			sourceTree = "<group>";
@@ -72,13 +72,13 @@
 		A74B92AB1ABE5F2B00AB08CE /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				A74B92AA1ABE5F2B00AB08CE /* CAMediaTimingFunctionBuilder.app */,
-				A74B92BD1ABE5F2B00AB08CE /* CAMediaTimingFunctionBuilderTests.xctest */,
+				A74B92AA1ABE5F2B00AB08CE /* CATweaker.app */,
+				A74B92BD1ABE5F2B00AB08CE /* CATweakerTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		A74B92AC1ABE5F2B00AB08CE /* CAMediaTimingFunctionBuilder */ = {
+		A74B92AC1ABE5F2B00AB08CE /* CATweaker */ = {
 			isa = PBXGroup;
 			children = (
 				A74B92CF1ABE602900AB08CE /* CurveView.h */,
@@ -89,6 +89,7 @@
 				A74B92B61ABE5F2B00AB08CE /* MainMenu.xib */,
 				A74B92AD1ABE5F2B00AB08CE /* Supporting Files */,
 			);
+			name = CATweaker;
 			path = CAMediaTimingFunctionBuilder;
 			sourceTree = "<group>";
 		};
@@ -102,12 +103,13 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		A74B92C01ABE5F2B00AB08CE /* CAMediaTimingFunctionBuilderTests */ = {
+		A74B92C01ABE5F2B00AB08CE /* CATweakerTests */ = {
 			isa = PBXGroup;
 			children = (
-				A74B92C31ABE5F2B00AB08CE /* CAMediaTimingFunctionBuilderTests.m */,
+				A74B92C31ABE5F2B00AB08CE /* CATweakerTests.m */,
 				A74B92C11ABE5F2B00AB08CE /* Supporting Files */,
 			);
+			name = CATweakerTests;
 			path = CAMediaTimingFunctionBuilderTests;
 			sourceTree = "<group>";
 		};
@@ -122,9 +124,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		A74B92A91ABE5F2B00AB08CE /* CAMediaTimingFunctionBuilder */ = {
+		A74B92A91ABE5F2B00AB08CE /* CATweaker */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = A74B92C71ABE5F2B00AB08CE /* Build configuration list for PBXNativeTarget "CAMediaTimingFunctionBuilder" */;
+			buildConfigurationList = A74B92C71ABE5F2B00AB08CE /* Build configuration list for PBXNativeTarget "CATweaker" */;
 			buildPhases = (
 				A74B92A61ABE5F2B00AB08CE /* Sources */,
 				A74B92A71ABE5F2B00AB08CE /* Frameworks */,
@@ -134,14 +136,14 @@
 			);
 			dependencies = (
 			);
-			name = CAMediaTimingFunctionBuilder;
+			name = CATweaker;
 			productName = CAMediaTimingFunctionBuilder;
-			productReference = A74B92AA1ABE5F2B00AB08CE /* CAMediaTimingFunctionBuilder.app */;
+			productReference = A74B92AA1ABE5F2B00AB08CE /* CATweaker.app */;
 			productType = "com.apple.product-type.application";
 		};
-		A74B92BC1ABE5F2B00AB08CE /* CAMediaTimingFunctionBuilderTests */ = {
+		A74B92BC1ABE5F2B00AB08CE /* CATweakerTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = A74B92CA1ABE5F2B00AB08CE /* Build configuration list for PBXNativeTarget "CAMediaTimingFunctionBuilderTests" */;
+			buildConfigurationList = A74B92CA1ABE5F2B00AB08CE /* Build configuration list for PBXNativeTarget "CATweakerTests" */;
 			buildPhases = (
 				A74B92B91ABE5F2B00AB08CE /* Sources */,
 				A74B92BA1ABE5F2B00AB08CE /* Frameworks */,
@@ -152,9 +154,9 @@
 			dependencies = (
 				A74B92BF1ABE5F2B00AB08CE /* PBXTargetDependency */,
 			);
-			name = CAMediaTimingFunctionBuilderTests;
+			name = CATweakerTests;
 			productName = CAMediaTimingFunctionBuilderTests;
-			productReference = A74B92BD1ABE5F2B00AB08CE /* CAMediaTimingFunctionBuilderTests.xctest */;
+			productReference = A74B92BD1ABE5F2B00AB08CE /* CATweakerTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -175,7 +177,7 @@
 					};
 				};
 			};
-			buildConfigurationList = A74B92A51ABE5F2B00AB08CE /* Build configuration list for PBXProject "CAMediaTimingFunctionBuilder" */;
+			buildConfigurationList = A74B92A51ABE5F2B00AB08CE /* Build configuration list for PBXProject "CATweaker" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -188,8 +190,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				A74B92A91ABE5F2B00AB08CE /* CAMediaTimingFunctionBuilder */,
-				A74B92BC1ABE5F2B00AB08CE /* CAMediaTimingFunctionBuilderTests */,
+				A74B92A91ABE5F2B00AB08CE /* CATweaker */,
+				A74B92BC1ABE5F2B00AB08CE /* CATweakerTests */,
 			);
 		};
 /* End PBXProject section */
@@ -229,7 +231,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A74B92C41ABE5F2B00AB08CE /* CAMediaTimingFunctionBuilderTests.m in Sources */,
+				A74B92C41ABE5F2B00AB08CE /* CATweakerTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -238,7 +240,7 @@
 /* Begin PBXTargetDependency section */
 		A74B92BF1ABE5F2B00AB08CE /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = A74B92A91ABE5F2B00AB08CE /* CAMediaTimingFunctionBuilder */;
+			target = A74B92A91ABE5F2B00AB08CE /* CATweaker */;
 			targetProxy = A74B92BE1ABE5F2B00AB08CE /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -338,7 +340,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = CAMediaTimingFunctionBuilder/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = CATweaker;
 			};
 			name = Debug;
 		};
@@ -349,7 +351,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = CAMediaTimingFunctionBuilder/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = CATweaker;
 			};
 			name = Release;
 		};
@@ -368,7 +370,7 @@
 				);
 				INFOPLIST_FILE = CAMediaTimingFunctionBuilderTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = CATweakerTests;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CAMediaTimingFunctionBuilder.app/Contents/MacOS/CAMediaTimingFunctionBuilder";
 			};
 			name = Debug;
@@ -384,7 +386,7 @@
 				);
 				INFOPLIST_FILE = CAMediaTimingFunctionBuilderTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = CATweakerTests;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CAMediaTimingFunctionBuilder.app/Contents/MacOS/CAMediaTimingFunctionBuilder";
 			};
 			name = Release;
@@ -392,7 +394,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		A74B92A51ABE5F2B00AB08CE /* Build configuration list for PBXProject "CAMediaTimingFunctionBuilder" */ = {
+		A74B92A51ABE5F2B00AB08CE /* Build configuration list for PBXProject "CATweaker" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				A74B92C51ABE5F2B00AB08CE /* Debug */,
@@ -401,7 +403,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		A74B92C71ABE5F2B00AB08CE /* Build configuration list for PBXNativeTarget "CAMediaTimingFunctionBuilder" */ = {
+		A74B92C71ABE5F2B00AB08CE /* Build configuration list for PBXNativeTarget "CATweaker" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				A74B92C81ABE5F2B00AB08CE /* Debug */,
@@ -410,7 +412,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		A74B92CA1ABE5F2B00AB08CE /* Build configuration list for PBXNativeTarget "CAMediaTimingFunctionBuilderTests" */ = {
+		A74B92CA1ABE5F2B00AB08CE /* Build configuration list for PBXNativeTarget "CATweakerTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				A74B92CB1ABE5F2B00AB08CE /* Debug */,

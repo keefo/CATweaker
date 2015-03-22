@@ -9,11 +9,11 @@
 #import <Cocoa/Cocoa.h>
 #import <XCTest/XCTest.h>
 
-@interface CAMediaTimingFunctionBuilderTests : XCTestCase
+@interface CATweakerTests : XCTestCase
 
 @end
 
-@implementation CAMediaTimingFunctionBuilderTests
+@implementation CATweakerTests
 
 - (void)setUp {
     [super setUp];
