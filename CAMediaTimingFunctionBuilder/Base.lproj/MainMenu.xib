@@ -15,6 +15,7 @@
         <customObject id="Voe-Tx-rLC" customClass="AppDelegate">
             <connections>
                 <outlet property="curveView" destination="PCK-Cv-hXu" id="pgp-8s-2oI"/>
+                <outlet property="textView" destination="PIq-jc-23h" id="032-IP-PLq"/>
                 <outlet property="window" destination="QvC-M9-y7g" id="gIp-Ho-8D9"/>
             </connections>
         </customObject>
@@ -692,14 +693,14 @@
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             <subviews>
                                 <textView importsGraphics="NO" findStyle="panel" continuousSpellChecking="YES" allowsUndo="YES" usesRuler="YES" usesFontPanel="YES" verticallyResizable="YES" allowsNonContiguousLayout="YES" quoteSubstitution="YES" dashSubstitution="YES" spellingCorrection="YES" smartInsertDelete="YES" id="PIq-jc-23h">
-                                    <rect key="frame" x="0.0" y="0.0" width="223" height="133"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="223" height="148"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <size key="minSize" width="763" height="148"/>
-                                    <size key="maxSize" width="763" height="10000000"/>
+                                    <size key="maxSize" width="780" height="10000000"/>
                                     <color key="insertionPointColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                     <size key="minSize" width="763" height="148"/>
-                                    <size key="maxSize" width="763" height="10000000"/>
+                                    <size key="maxSize" width="780" height="10000000"/>
                                 </textView>
                             </subviews>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>

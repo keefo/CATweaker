@@ -11,6 +11,7 @@
 
 @interface AppDelegate : NSObject <NSApplicationDelegate>
 @property(assign) IBOutlet CurveView *curveView;
+@property(assign) IBOutlet NSTextView *textView;
 
 @end
 
