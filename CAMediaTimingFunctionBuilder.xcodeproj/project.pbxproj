@@ -1,0 +1,413 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A74B92B11ABE5F2B00AB08CE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A74B92B01ABE5F2B00AB08CE /* AppDelegate.m */; };
+		A74B92B31ABE5F2B00AB08CE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A74B92B21ABE5F2B00AB08CE /* main.m */; };
+		A74B92B51ABE5F2B00AB08CE /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A74B92B41ABE5F2B00AB08CE /* Images.xcassets */; };
+		A74B92B81ABE5F2B00AB08CE /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = A74B92B61ABE5F2B00AB08CE /* MainMenu.xib */; };
+		A74B92C41ABE5F2B00AB08CE /* CAMediaTimingFunctionBuilderTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A74B92C31ABE5F2B00AB08CE /* CAMediaTimingFunctionBuilderTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A74B92BE1ABE5F2B00AB08CE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A74B92A21ABE5F2B00AB08CE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A74B92A91ABE5F2B00AB08CE;
+			remoteInfo = CAMediaTimingFunctionBuilder;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		A74B92AA1ABE5F2B00AB08CE /* CAMediaTimingFunctionBuilder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CAMediaTimingFunctionBuilder.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A74B92AE1ABE5F2B00AB08CE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A74B92AF1ABE5F2B00AB08CE /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		A74B92B01ABE5F2B00AB08CE /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		A74B92B21ABE5F2B00AB08CE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		A74B92B41ABE5F2B00AB08CE /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		A74B92B71ABE5F2B00AB08CE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		A74B92BD1ABE5F2B00AB08CE /* CAMediaTimingFunctionBuilderTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CAMediaTimingFunctionBuilderTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A74B92C21ABE5F2B00AB08CE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A74B92C31ABE5F2B00AB08CE /* CAMediaTimingFunctionBuilderTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CAMediaTimingFunctionBuilderTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A74B92A71ABE5F2B00AB08CE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A74B92BA1ABE5F2B00AB08CE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A74B92A11ABE5F2B00AB08CE = {
+			isa = PBXGroup;
+			children = (
+				A74B92AC1ABE5F2B00AB08CE /* CAMediaTimingFunctionBuilder */,
+				A74B92C01ABE5F2B00AB08CE /* CAMediaTimingFunctionBuilderTests */,
+				A74B92AB1ABE5F2B00AB08CE /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A74B92AB1ABE5F2B00AB08CE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A74B92AA1ABE5F2B00AB08CE /* CAMediaTimingFunctionBuilder.app */,
+				A74B92BD1ABE5F2B00AB08CE /* CAMediaTimingFunctionBuilderTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A74B92AC1ABE5F2B00AB08CE /* CAMediaTimingFunctionBuilder */ = {
+			isa = PBXGroup;
+			children = (
+				A74B92AF1ABE5F2B00AB08CE /* AppDelegate.h */,
+				A74B92B01ABE5F2B00AB08CE /* AppDelegate.m */,
+				A74B92B41ABE5F2B00AB08CE /* Images.xcassets */,
+				A74B92B61ABE5F2B00AB08CE /* MainMenu.xib */,
+				A74B92AD1ABE5F2B00AB08CE /* Supporting Files */,
+			);
+			path = CAMediaTimingFunctionBuilder;
+			sourceTree = "<group>";
+		};
+		A74B92AD1ABE5F2B00AB08CE /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				A74B92AE1ABE5F2B00AB08CE /* Info.plist */,
+				A74B92B21ABE5F2B00AB08CE /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A74B92C01ABE5F2B00AB08CE /* CAMediaTimingFunctionBuilderTests */ = {
+			isa = PBXGroup;
+			children = (
+				A74B92C31ABE5F2B00AB08CE /* CAMediaTimingFunctionBuilderTests.m */,
+				A74B92C11ABE5F2B00AB08CE /* Supporting Files */,
+			);
+			path = CAMediaTimingFunctionBuilderTests;
+			sourceTree = "<group>";
+		};
+		A74B92C11ABE5F2B00AB08CE /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				A74B92C21ABE5F2B00AB08CE /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A74B92A91ABE5F2B00AB08CE /* CAMediaTimingFunctionBuilder */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A74B92C71ABE5F2B00AB08CE /* Build configuration list for PBXNativeTarget "CAMediaTimingFunctionBuilder" */;
+			buildPhases = (
+				A74B92A61ABE5F2B00AB08CE /* Sources */,
+				A74B92A71ABE5F2B00AB08CE /* Frameworks */,
+				A74B92A81ABE5F2B00AB08CE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CAMediaTimingFunctionBuilder;
+			productName = CAMediaTimingFunctionBuilder;
+			productReference = A74B92AA1ABE5F2B00AB08CE /* CAMediaTimingFunctionBuilder.app */;
+			productType = "com.apple.product-type.application";
+		};
+		A74B92BC1ABE5F2B00AB08CE /* CAMediaTimingFunctionBuilderTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A74B92CA1ABE5F2B00AB08CE /* Build configuration list for PBXNativeTarget "CAMediaTimingFunctionBuilderTests" */;
+			buildPhases = (
+				A74B92B91ABE5F2B00AB08CE /* Sources */,
+				A74B92BA1ABE5F2B00AB08CE /* Frameworks */,
+				A74B92BB1ABE5F2B00AB08CE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A74B92BF1ABE5F2B00AB08CE /* PBXTargetDependency */,
+			);
+			name = CAMediaTimingFunctionBuilderTests;
+			productName = CAMediaTimingFunctionBuilderTests;
+			productReference = A74B92BD1ABE5F2B00AB08CE /* CAMediaTimingFunctionBuilderTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A74B92A21ABE5F2B00AB08CE /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0620;
+				ORGANIZATIONNAME = Beyondcow;
+				TargetAttributes = {
+					A74B92A91ABE5F2B00AB08CE = {
+						CreatedOnToolsVersion = 6.2;
+					};
+					A74B92BC1ABE5F2B00AB08CE = {
+						CreatedOnToolsVersion = 6.2;
+						TestTargetID = A74B92A91ABE5F2B00AB08CE;
+					};
+				};
+			};
+			buildConfigurationList = A74B92A51ABE5F2B00AB08CE /* Build configuration list for PBXProject "CAMediaTimingFunctionBuilder" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A74B92A11ABE5F2B00AB08CE;
+			productRefGroup = A74B92AB1ABE5F2B00AB08CE /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A74B92A91ABE5F2B00AB08CE /* CAMediaTimingFunctionBuilder */,
+				A74B92BC1ABE5F2B00AB08CE /* CAMediaTimingFunctionBuilderTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A74B92A81ABE5F2B00AB08CE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A74B92B51ABE5F2B00AB08CE /* Images.xcassets in Resources */,
+				A74B92B81ABE5F2B00AB08CE /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A74B92BB1ABE5F2B00AB08CE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A74B92A61ABE5F2B00AB08CE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A74B92B31ABE5F2B00AB08CE /* main.m in Sources */,
+				A74B92B11ABE5F2B00AB08CE /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A74B92B91ABE5F2B00AB08CE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A74B92C41ABE5F2B00AB08CE /* CAMediaTimingFunctionBuilderTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A74B92BF1ABE5F2B00AB08CE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A74B92A91ABE5F2B00AB08CE /* CAMediaTimingFunctionBuilder */;
+			targetProxy = A74B92BE1ABE5F2B00AB08CE /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		A74B92B61ABE5F2B00AB08CE /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A74B92B71ABE5F2B00AB08CE /* Base */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		A74B92C51ABE5F2B00AB08CE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		A74B92C61ABE5F2B00AB08CE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		A74B92C81ABE5F2B00AB08CE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = CAMediaTimingFunctionBuilder/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		A74B92C91ABE5F2B00AB08CE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = CAMediaTimingFunctionBuilder/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		A74B92CB1ABE5F2B00AB08CE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = CAMediaTimingFunctionBuilderTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CAMediaTimingFunctionBuilder.app/Contents/MacOS/CAMediaTimingFunctionBuilder";
+			};
+			name = Debug;
+		};
+		A74B92CC1ABE5F2B00AB08CE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = CAMediaTimingFunctionBuilderTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CAMediaTimingFunctionBuilder.app/Contents/MacOS/CAMediaTimingFunctionBuilder";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A74B92A51ABE5F2B00AB08CE /* Build configuration list for PBXProject "CAMediaTimingFunctionBuilder" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A74B92C51ABE5F2B00AB08CE /* Debug */,
+				A74B92C61ABE5F2B00AB08CE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A74B92C71ABE5F2B00AB08CE /* Build configuration list for PBXNativeTarget "CAMediaTimingFunctionBuilder" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A74B92C81ABE5F2B00AB08CE /* Debug */,
+				A74B92C91ABE5F2B00AB08CE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		A74B92CA1ABE5F2B00AB08CE /* Build configuration list for PBXNativeTarget "CAMediaTimingFunctionBuilderTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A74B92CB1ABE5F2B00AB08CE /* Debug */,
+				A74B92CC1ABE5F2B00AB08CE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A74B92A21ABE5F2B00AB08CE /* Project object */;
+}
