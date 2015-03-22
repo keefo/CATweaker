@@ -1,6 +1,6 @@
 //
 //  CurveView.m
-//  CAMediaTimingFunctionBuilder
+//  CATweaker
 //
 //  Created by X on 2015-03-21.
 //  Copyright (c) 2015 Beyondcow. All rights reserved.
@@ -44,7 +44,7 @@
 
 @end
 
-@interface CurveView()
+@implementation CurveView
 {
     NSTrackingArea *trackingArea;
     
@@ -52,9 +52,6 @@
     NSRect targetDotStartingFrame;
     NSPoint mouseDownStartingPoint;
 }
-@end
-
-@implementation CurveView
 
 - (void)updateTrackingAreas
 {
@@ -236,7 +233,7 @@
         targetDotStartingFrame = draggingTargetDot.frame;
         [draggingTargetDot setNeedsDisplay:YES];
         [self setNeedsDisplay:YES];
-        [[NSNotificationCenter defaultCenter] postNotificationName:@"PointChangeNotification" object:nil];
+        //[[NSNotificationCenter defaultCenter] postNotificationName:@"PointChangeNotification" object:nil];
     }
 }
 
@@ -263,6 +260,7 @@
         
         // post notification for generating function
         [[NSNotificationCenter defaultCenter] postNotificationName:@"PointChangeNotification" object:nil];
+        [[NSNotificationCenter defaultCenter] postNotificationName:@"PointChangedNotification" object:nil];
         
         // register undo method
         [self _storeLastPoint:[NSString stringWithFormat:@"%d|%@", draggingTargetDot==dot1?1:2, NSStringFromPoint(targetDotStartingFrame.origin)]];
@@ -310,6 +308,8 @@
     
     // post notification for generating function
     [[NSNotificationCenter defaultCenter] postNotificationName:@"PointChangeNotification" object:nil];
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"PointChangedNotification" object:nil];
+    
 }
 
 - (void)_storeLastPoint:(NSString*)lastPointStr

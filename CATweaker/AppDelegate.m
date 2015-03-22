@@ -1,12 +1,13 @@
 //
 //  AppDelegate.m
-//  CAMediaTimingFunctionBuilder
+//  CATweaker
 //
 //  Created by X on 2015-03-21.
 //  Copyright (c) 2015 Beyondcow. All rights reserved.
 //
 
 #import "AppDelegate.h"
+#import <QuartzCore/QuartzCore.h>
 
 #define OBVALL (NSKeyValueObservingOptionNew|NSKeyValueObservingOptionOld|NSKeyValueObservingOptionInitial)
 
@@ -40,6 +41,8 @@
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
     // Insert code here to initialize your application
+    
+    [_textView setTextContainerInset:NSMakeSize(5, 8)];
     NSNotificationCenter* nc = [NSNotificationCenter defaultCenter];
     
     [nc addObserver:self
@@ -47,7 +50,13 @@
                name:@"PointChangeNotification"
              object:nil];
     
+    [nc addObserver:self
+           selector:@selector(pointChangedNotification:)
+               name:@"PointChangedNotification"
+             object:nil];
+    
     [self pointChangeNotification:nil];
+    [self pointChangedNotification:nil];
 }
 
 - (void)applicationWillTerminate:(NSNotification *)aNotification {
@@ -94,5 +103,13 @@
     [_textView.textStorage setAttributedString:str];
 }
 
+- (void)pointChangedNotification:(NSNotification*)n
+{
+    NSPoint p1 = _curveView.controlPoint1;
+    NSPoint p2 = _curveView.controlPoint2;
+    
+    CAMediaTimingFunction *fun = [CAMediaTimingFunction functionWithControlPoints:p1.x :p1.y :p2.x :p2.y];
+    [_demoView animationWithTimeFunction:fun];
+}
 
 @end

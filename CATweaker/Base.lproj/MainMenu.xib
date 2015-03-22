@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="6751" systemVersion="13F1066" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
     <dependencies>
+        <deployment identifier="macosx"/>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="6751"/>
     </dependencies>
     <objects>
@@ -14,6 +15,7 @@
         <customObject id="Voe-Tx-rLC" customClass="AppDelegate">
             <connections>
                 <outlet property="curveView" destination="PCK-Cv-hXu" id="pgp-8s-2oI"/>
+                <outlet property="demoView" destination="61q-qc-Jdn" id="PGt-hv-D7e"/>
                 <outlet property="textView" destination="PIq-jc-23h" id="032-IP-PLq"/>
                 <outlet property="window" destination="QvC-M9-y7g" id="gIp-Ho-8D9"/>
             </connections>
@@ -682,23 +684,23 @@
                     <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PCK-Cv-hXu" customClass="CurveView">
                         <rect key="frame" x="20" y="189" width="380" height="380"/>
                     </customView>
-                    <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="61q-qc-Jdn">
+                    <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="61q-qc-Jdn" customClass="DemoView">
                         <rect key="frame" x="420" y="189" width="380" height="380"/>
                     </customView>
-                    <scrollView fixedFrame="YES" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YRE-hk-Vg8">
+                    <scrollView focusRingType="none" fixedFrame="YES" borderType="groove" autohidesScrollers="YES" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YRE-hk-Vg8">
                         <rect key="frame" x="20" y="22" width="780" height="150"/>
-                        <clipView key="contentView" misplaced="YES" id="Kfs-9M-drn">
+                        <clipView key="contentView" focusRingType="none" misplaced="YES" id="Kfs-9M-drn">
                             <rect key="frame" x="1" y="1" width="223" height="133"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             <subviews>
-                                <textView importsGraphics="NO" findStyle="panel" continuousSpellChecking="YES" allowsUndo="YES" usesRuler="YES" usesFontPanel="YES" verticallyResizable="YES" allowsNonContiguousLayout="YES" quoteSubstitution="YES" dashSubstitution="YES" spellingCorrection="YES" smartInsertDelete="YES" id="PIq-jc-23h">
+                                <textView focusRingType="none" importsGraphics="NO" findStyle="panel" allowsUndo="YES" verticallyResizable="YES" allowsNonContiguousLayout="YES" id="PIq-jc-23h">
                                     <rect key="frame" x="0.0" y="0.0" width="223" height="148"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                    <size key="minSize" width="763" height="148"/>
+                                    <size key="minSize" width="776" height="146"/>
                                     <size key="maxSize" width="780" height="10000000"/>
                                     <color key="insertionPointColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
-                                    <size key="minSize" width="763" height="148"/>
+                                    <size key="minSize" width="776" height="146"/>
                                     <size key="maxSize" width="780" height="10000000"/>
                                 </textView>
                             </subviews>
@@ -708,7 +710,7 @@
                             <rect key="frame" x="-100" y="-100" width="87" height="18"/>
                             <autoresizingMask key="autoresizingMask"/>
                         </scroller>
-                        <scroller key="verticalScroller" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="eqc-qR-MR4">
+                        <scroller key="verticalScroller" hidden="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="eqc-qR-MR4">
                             <rect key="frame" x="224" y="1" width="15" height="133"/>
                             <autoresizingMask key="autoresizingMask"/>
                         </scroller>
