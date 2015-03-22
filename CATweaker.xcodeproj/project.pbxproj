@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		A71563011ABF402800CBD1DC /* DemoView.m in Sources */ = {isa = PBXBuildFile; fileRef = A71563001ABF402800CBD1DC /* DemoView.m */; };
 		A715630A1ABF43F800CBD1DC /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A71563071ABF43DA00CBD1DC /* QuartzCore.framework */; };
+		A715630C1ABF535800CBD1DC /* AppIcon.icns in Resources */ = {isa = PBXBuildFile; fileRef = A715630B1ABF535800CBD1DC /* AppIcon.icns */; };
 		A74B92B11ABE5F2B00AB08CE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A74B92B01ABE5F2B00AB08CE /* AppDelegate.m */; };
 		A74B92B31ABE5F2B00AB08CE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A74B92B21ABE5F2B00AB08CE /* main.m */; };
 		A74B92B51ABE5F2B00AB08CE /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A74B92B41ABE5F2B00AB08CE /* Images.xcassets */; };
@@ -31,6 +32,7 @@
 		A71562FF1ABF402800CBD1DC /* DemoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DemoView.h; sourceTree = "<group>"; };
 		A71563001ABF402800CBD1DC /* DemoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DemoView.m; sourceTree = "<group>"; };
 		A71563071ABF43DA00CBD1DC /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		A715630B1ABF535800CBD1DC /* AppIcon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = AppIcon.icns; sourceTree = SOURCE_ROOT; };
 		A74B92AA1ABE5F2B00AB08CE /* CATweaker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CATweaker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A74B92AE1ABE5F2B00AB08CE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A74B92AF1ABE5F2B00AB08CE /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -112,6 +114,7 @@
 		A74B92AD1ABE5F2B00AB08CE /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				A715630B1ABF535800CBD1DC /* AppIcon.icns */,
 				A74B92CD1ABE5F9400AB08CE /* README.md */,
 				A74B92AE1ABE5F2B00AB08CE /* Info.plist */,
 				A74B92B21ABE5F2B00AB08CE /* main.m */,
@@ -218,6 +221,7 @@
 			files = (
 				A74B92B51ABE5F2B00AB08CE /* Images.xcassets in Resources */,
 				A74B92B81ABE5F2B00AB08CE /* MainMenu.xib in Resources */,
+				A715630C1ABF535800CBD1DC /* AppIcon.icns in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -351,7 +355,6 @@
 		A74B92C81ABE5F2B00AB08CE /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = CATweaker/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
@@ -362,7 +365,6 @@
 		A74B92C91ABE5F2B00AB08CE /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = CATweaker/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
