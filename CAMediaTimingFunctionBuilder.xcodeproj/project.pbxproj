@@ -12,6 +12,8 @@
 		A74B92B51ABE5F2B00AB08CE /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A74B92B41ABE5F2B00AB08CE /* Images.xcassets */; };
 		A74B92B81ABE5F2B00AB08CE /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = A74B92B61ABE5F2B00AB08CE /* MainMenu.xib */; };
 		A74B92C41ABE5F2B00AB08CE /* CAMediaTimingFunctionBuilderTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A74B92C31ABE5F2B00AB08CE /* CAMediaTimingFunctionBuilderTests.m */; };
+		A74B92CE1ABE5F9400AB08CE /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = A74B92CD1ABE5F9400AB08CE /* README.md */; };
+		A74B92D11ABE602900AB08CE /* CurveView.m in Sources */ = {isa = PBXBuildFile; fileRef = A74B92D01ABE602900AB08CE /* CurveView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +37,9 @@
 		A74B92BD1ABE5F2B00AB08CE /* CAMediaTimingFunctionBuilderTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CAMediaTimingFunctionBuilderTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A74B92C21ABE5F2B00AB08CE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A74B92C31ABE5F2B00AB08CE /* CAMediaTimingFunctionBuilderTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CAMediaTimingFunctionBuilderTests.m; sourceTree = "<group>"; };
+		A74B92CD1ABE5F9400AB08CE /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
+		A74B92CF1ABE602900AB08CE /* CurveView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CurveView.h; sourceTree = "<group>"; };
+		A74B92D01ABE602900AB08CE /* CurveView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CurveView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +81,8 @@
 		A74B92AC1ABE5F2B00AB08CE /* CAMediaTimingFunctionBuilder */ = {
 			isa = PBXGroup;
 			children = (
+				A74B92CF1ABE602900AB08CE /* CurveView.h */,
+				A74B92D01ABE602900AB08CE /* CurveView.m */,
 				A74B92AF1ABE5F2B00AB08CE /* AppDelegate.h */,
 				A74B92B01ABE5F2B00AB08CE /* AppDelegate.m */,
 				A74B92B41ABE5F2B00AB08CE /* Images.xcassets */,
@@ -88,6 +95,7 @@
 		A74B92AD1ABE5F2B00AB08CE /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				A74B92CD1ABE5F9400AB08CE /* README.md */,
 				A74B92AE1ABE5F2B00AB08CE /* Info.plist */,
 				A74B92B21ABE5F2B00AB08CE /* main.m */,
 			);
@@ -210,7 +218,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A74B92CE1ABE5F9400AB08CE /* README.md in Sources */,
 				A74B92B31ABE5F2B00AB08CE /* main.m in Sources */,
+				A74B92D11ABE602900AB08CE /* CurveView.m in Sources */,
 				A74B92B11ABE5F2B00AB08CE /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -398,6 +408,7 @@
 				A74B92C91ABE5F2B00AB08CE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A74B92CA1ABE5F2B00AB08CE /* Build configuration list for PBXNativeTarget "CAMediaTimingFunctionBuilderTests" */ = {
 			isa = XCConfigurationList;
@@ -406,6 +417,7 @@
 				A74B92CC1ABE5F2B00AB08CE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

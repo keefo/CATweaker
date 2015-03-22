@@ -7,9 +7,10 @@
 //
 
 #import <Cocoa/Cocoa.h>
+#import "CurveView.h"
 
 @interface AppDelegate : NSObject <NSApplicationDelegate>
-
+@property(assign) IBOutlet CurveView *curveView;
 
 @end
 
