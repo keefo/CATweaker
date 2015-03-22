@@ -62,6 +62,7 @@
 {
     [ball removeAllAnimations];
     
+    
     currentTimingFunction = timingFunction;
     
     [CATransaction begin];
@@ -74,12 +75,14 @@
     [animation setFromValue:[NSValue valueWithPoint:ball.frame.origin]];
     [animation setToValue:[NSValue valueWithPoint:CGPointMake(NSMaxX(self.bounds)-20, NSMaxY(self.bounds)-20)]];
     [animation setTimingFunction:currentTimingFunction];
+    int currentDuration = 1;
     if (mouseIn) {
-        [animation setDuration:5.0];
+        currentDuration = 5;
     }
     else{
-        [animation setDuration:1.0];
+        currentDuration = 1;
     }
+    [animation setDuration:currentDuration];
     [animation setRepeatCount:INT16_MAX];
     
     [ball addAnimation:animation forKey:@"position"];
