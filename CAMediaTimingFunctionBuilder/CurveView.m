@@ -46,10 +46,11 @@
 
 @interface CurveView()
 {
-    DragDotOnCurveView *mouseDownDot;
-    NSPoint mouseDownPoint;
-    NSRect mouseDownFrame;
     NSTrackingArea *trackingArea;
+    
+    DragDotOnCurveView *draggingTargetDot;
+    NSRect targetDotStartingFrame;
+    NSPoint mouseDownStartingPoint;
 }
 @end
 
@@ -91,18 +92,50 @@
     [self addSubview:dot2];
 }
 
-- (NSPoint)begPoint
+
+/*
+ * point1 return the first control point for Bezier path
+ * This point contain the value (0~1.0, 0~1.0) rather than actural pixel point of dot1
+ */
+- (NSPoint)controlPoint1;
+{
+    return NSMakePoint(fabs(dot1.frame.origin.x-[self _begPoint].x)/fabs([self _begPoint].x-[self _endPoint].x), fabs(dot1.frame.origin.y-[self _begPoint].y)/fabs([self _begPoint].y-[self _endPoint].y));
+}
+
+/*
+ * point1 return the second control point for Bezier path
+ * This point contain the value (0~1.0, 0~1.0) rather than actural pixel point of dot2
+ */
+- (NSPoint)controlPoint2;
+{
+    return NSMakePoint(fabs(dot2.frame.origin.x-[self _begPoint].x)/fabs([self _begPoint].x-[self _endPoint].x), fabs(dot2.frame.origin.y-[self _begPoint].y)/fabs([self _begPoint].y-[self _endPoint].y));
+}
+
+#pragma mark -
+
+/*
+ * begPoint return left-bottom corner point
+ * This is the start point of our Bezier path
+ */
+- (NSPoint)_begPoint
 {
     return NSMakePoint(MARGIN, MARGIN);
 }
 
-- (NSPoint)endPoint
+/*
+ * begPoint return right-top corner point
+ * This is the end point of our Bezier path
+ */
+- (NSPoint)_endPoint
 {
     return NSMakePoint(NSMaxX(self.bounds)-MARGIN, NSMaxY(self.bounds)-MARGIN);
 }
 
 - (void)drawRect:(NSRect)dirtyRect {
+    
     [super drawRect:dirtyRect];
+    
+    // draw background and border
     [[NSColor grayColor] setFill];
     NSRectFill(NSInsetRect(self.bounds, 0, 0));
     [[NSColor colorWithDeviceWhite:0.97 alpha:1] setFill];
@@ -110,11 +143,12 @@
     
     NSPoint point1 = NSMakePoint(NSMidX(dot1.frame), NSMidY(dot1.frame));
     NSPoint point2 = NSMakePoint(NSMidX(dot2.frame), NSMidY(dot2.frame));
-    NSPoint begPoint = [self begPoint];
-    NSPoint endPoint = [self endPoint];
+    NSPoint begPoint = [self _begPoint];
+    NSPoint endPoint = [self _endPoint];
     
     int lineWidth = 2;
     
+    // draw y-axis
     [[NSColor lightGrayColor] setStroke];
     NSBezierPath *line = [NSBezierPath bezierPath];
     [line moveToPoint:NSMakePoint(begPoint.x, begPoint.y-20)];
@@ -123,6 +157,7 @@
     [line setLineWidth:3];
     [line stroke];
     
+    // draw x-axis
     line = [NSBezierPath bezierPath];
     [line moveToPoint:NSMakePoint(begPoint.x-20, begPoint.y)];
     [line lineToPoint:NSMakePoint(endPoint.x, begPoint.y)];
@@ -130,6 +165,7 @@
     [line setLineWidth:3];
     [line stroke];
     
+    // draw a line from start point to the first control point
     [[NSColor grayColor] setStroke];
     NSBezierPath *p1 = [NSBezierPath bezierPath];
     [p1 moveToPoint:begPoint];
@@ -138,6 +174,7 @@
     [p1 setLineWidth:lineWidth];
     [p1 stroke];
     
+    // draw a line from end point to the second control point
     NSBezierPath *p2 = [NSBezierPath bezierPath];
     [p2 moveToPoint:endPoint];
     [p2 lineToPoint:point2];
@@ -145,8 +182,8 @@
     [p2 setLineWidth:lineWidth];
     [p2 stroke];
 
+    // draw our sweet Bezier path in blue color
     [[NSColor colorWithCalibratedRed:0.321 green:0.470 blue:0.684 alpha:1.000] setStroke];
-    
     NSBezierPath *curve = [NSBezierPath bezierPath];
     [curve setLineWidth:3];
     [curve moveToPoint:begPoint];
@@ -154,54 +191,30 @@
     [curve stroke];
 }
 
-- (NSPoint)point1;
-{
-    return NSMakePoint(fabs(dot1.frame.origin.x-[self begPoint].x)/fabs([self begPoint].x-[self endPoint].x), fabs(dot1.frame.origin.y-[self begPoint].y)/fabs([self begPoint].y-[self endPoint].y));
-}
-
-- (NSPoint)point2;
-{
-    return NSMakePoint(fabs(dot2.frame.origin.x-[self begPoint].x)/fabs([self begPoint].x-[self endPoint].x), fabs(dot2.frame.origin.y-[self begPoint].y)/fabs([self begPoint].y-[self endPoint].y));
-}
-
 #pragma mark - Mouse Event
 
-- (NSView *)myHitTest:(NSPoint)aPoint
+- (NSView *)_myHitTest:(NSPoint)aPoint
 {
     for (NSView *subView in [self subviews]) {
         if (![subView isHidden] && NSPointInRect(aPoint, subView.frame))
             return subView;
     }
-    
     return nil;
 }
 
-- (void)mouseDown:(NSEvent *)theEvent
+/*
+ * limit drag point into rect
+ */
+- (NSPoint)_restrictPoint:(NSPoint)point
 {
-    mouseDownDot = nil;
-    NSPoint point = [self convertPoint:[theEvent locationInWindow] fromView:nil];
-    NSView *v = [self myHitTest:point];
-    if ([v isKindOfClass:[DragDotOnCurveView class]]) {
-        mouseDownDot = (DragDotOnCurveView*)v;
-        mouseDownDot.mouseDown = YES;
-        mouseDownPoint = point;
-        mouseDownFrame = mouseDownDot.frame;
-        [mouseDownDot setNeedsDisplay:YES];
-        [self setNeedsDisplay:YES];
-        [[NSNotificationCenter defaultCenter] postNotificationName:@"PointChangeNotification" object:nil];
-    }
-}
-
-- (NSPoint)restrictPoint:(NSPoint)point
-{
-    int x = mouseDownFrame.origin.x+(point.x-mouseDownPoint.x);
+    int x = targetDotStartingFrame.origin.x+(point.x-mouseDownStartingPoint.x);
     if (x<0) {
         x=0;
     }
     if (x>NSMaxX(self.bounds)-20) {
         x=NSMaxX(self.bounds)-20;
     }
-    int y = mouseDownFrame.origin.y+(point.y-mouseDownPoint.y);
+    int y = targetDotStartingFrame.origin.y+(point.y-mouseDownStartingPoint.y);
     if (y<0) {
         y=0;
     }
@@ -211,42 +224,99 @@
     return NSMakePoint(x, y);
 }
 
-- (void)mouseUp:(NSEvent *)theEvent
+- (void)mouseDown:(NSEvent *)theEvent
 {
-    if (mouseDownDot) {
-        NSPoint point = [self convertPoint:[theEvent locationInWindow] fromView:nil];
-        point = [self restrictPoint:point];
-        
-        mouseDownDot.mouseDown = NO;
-        mouseDownDot.frame = NSMakeRect(point.x , point.y, mouseDownFrame.size.width, mouseDownFrame.size.height);
-        [mouseDownDot setNeedsDisplay:YES];
-        if (mouseDownDot==dot1) {
-            [[NSUserDefaults standardUserDefaults] setObject:NSStringFromPoint(dot1.frame.origin) forKey:@"dot1Origin"];
-        }
-        else if (mouseDownDot==dot2) {
-            [[NSUserDefaults standardUserDefaults] setObject:NSStringFromPoint(dot2.frame.origin) forKey:@"dot2Origin"];
-        }
-        mouseDownDot = nil;
+    draggingTargetDot = nil;
+    NSPoint point = [self convertPoint:[theEvent locationInWindow] fromView:nil];
+    NSView *v = [self _myHitTest:point];
+    if ([v isKindOfClass:[DragDotOnCurveView class]]) {
+        draggingTargetDot = (DragDotOnCurveView*)v;
+        draggingTargetDot.mouseDown = YES;
+        mouseDownStartingPoint = point;
+        targetDotStartingFrame = draggingTargetDot.frame;
+        [draggingTargetDot setNeedsDisplay:YES];
         [self setNeedsDisplay:YES];
         [[NSNotificationCenter defaultCenter] postNotificationName:@"PointChangeNotification" object:nil];
+    }
+}
+
+- (void)mouseUp:(NSEvent *)theEvent
+{
+    if (draggingTargetDot) {
+        
+        NSPoint point = [self convertPoint:[theEvent locationInWindow] fromView:nil];
+        point = [self _restrictPoint:point];
+     
+        draggingTargetDot.mouseDown = NO;
+        [draggingTargetDot setFrameOrigin:point];
+        [draggingTargetDot setNeedsDisplay:YES];
+        
+        if (draggingTargetDot==dot1) {
+            [[NSUserDefaults standardUserDefaults] setObject:NSStringFromPoint(dot1.frame.origin) forKey:@"dot1Origin"];
+        }
+        else if (draggingTargetDot==dot2) {
+            [[NSUserDefaults standardUserDefaults] setObject:NSStringFromPoint(dot2.frame.origin) forKey:@"dot2Origin"];
+        }
+        
+        // redraw chart
+        [self setNeedsDisplay:YES];
+        
+        // post notification for generating function
+        [[NSNotificationCenter defaultCenter] postNotificationName:@"PointChangeNotification" object:nil];
+        
+        // register undo method
+        [self _storeLastPoint:[NSString stringWithFormat:@"%d|%@", draggingTargetDot==dot1?1:2, NSStringFromPoint(targetDotStartingFrame.origin)]];
+   
+        draggingTargetDot = nil;
     }
 }
 
 - (void)mouseDragged:(NSEvent *)theEvent
 {
-    if(mouseDownDot){
-        NSPoint point = [self convertPoint:[theEvent locationInWindow] fromView:nil];
-        point = [self restrictPoint:point];
+    if(draggingTargetDot){
         
-        mouseDownDot.frame = NSMakeRect(point.x , point.y, mouseDownFrame.size.width, mouseDownFrame.size.height);
+        NSPoint point = [self convertPoint:[theEvent locationInWindow] fromView:nil];
+        point = [self _restrictPoint:point];
+        
+        [draggingTargetDot setFrameOrigin:point];
+        //redraw chart
         [self setNeedsDisplay:YES];
+        
+        // post notification for generating function
         [[NSNotificationCenter defaultCenter] postNotificationName:@"PointChangeNotification" object:nil];
     }
 }
 
-- (void)mouseMoved:(NSEvent *)theEvent
+#pragma mark - undo management
+
+- (void)_restoreLastPoint:(NSString*)lastPointStr
 {
-    NSLog(@"mouseMoved");
+    NSAssert([NSThread mainThread]==[NSThread currentThread], @"main thread only");
+  
+    NSString *target = [lastPointStr substringToIndex:1];
+    lastPointStr = [lastPointStr substringFromIndex:2];
+    NSPoint lastPoint = NSPointFromString(lastPointStr);
+    if ([target isEqualTo:@"1"]) {
+        [dot1 setFrameOrigin:lastPoint];
+        [[NSUserDefaults standardUserDefaults] setObject:NSStringFromPoint(lastPoint) forKey:@"dot1Origin"];
+    }
+    else if ([target isEqualTo:@"2"]) {
+        [dot2 setFrameOrigin:lastPoint];
+        [[NSUserDefaults standardUserDefaults] setObject:NSStringFromPoint(lastPoint) forKey:@"dot2Origin"];
+    }
+    
+    // redraw chart
+    [self setNeedsDisplay:YES];
+    
+    // post notification for generating function
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"PointChangeNotification" object:nil];
+}
+
+- (void)_storeLastPoint:(NSString*)lastPointStr
+{
+    [[self undoManager] registerUndoWithTarget:self
+                                      selector:@selector(_restoreLastPoint:)
+                                        object:lastPointStr];
 }
 
 

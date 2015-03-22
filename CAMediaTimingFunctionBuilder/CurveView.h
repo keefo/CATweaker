@@ -19,7 +19,7 @@
     DragDotOnCurveView *dot2;
 }
 
-- (NSPoint)point1;
-- (NSPoint)point2;
+- (NSPoint)controlPoint1;
+- (NSPoint)controlPoint2;
 
 @end
