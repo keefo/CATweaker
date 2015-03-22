@@ -89,8 +89,7 @@
 				A74B92B61ABE5F2B00AB08CE /* MainMenu.xib */,
 				A74B92AD1ABE5F2B00AB08CE /* Supporting Files */,
 			);
-			name = CATweaker;
-			path = CAMediaTimingFunctionBuilder;
+			path = CATweaker;
 			sourceTree = "<group>";
 		};
 		A74B92AD1ABE5F2B00AB08CE /* Supporting Files */ = {
@@ -109,8 +108,7 @@
 				A74B92C31ABE5F2B00AB08CE /* CATweakerTests.m */,
 				A74B92C11ABE5F2B00AB08CE /* Supporting Files */,
 			);
-			name = CATweakerTests;
-			path = CAMediaTimingFunctionBuilderTests;
+			path = CATweakerTests;
 			sourceTree = "<group>";
 		};
 		A74B92C11ABE5F2B00AB08CE /* Supporting Files */ = {
@@ -338,7 +336,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
-				INFOPLIST_FILE = CAMediaTimingFunctionBuilder/Info.plist;
+				INFOPLIST_FILE = CATweaker/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_NAME = CATweaker;
 			};
@@ -349,7 +347,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
-				INFOPLIST_FILE = CAMediaTimingFunctionBuilder/Info.plist;
+				INFOPLIST_FILE = CATweaker/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_NAME = CATweaker;
 			};
@@ -368,7 +366,7 @@
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = CAMediaTimingFunctionBuilderTests/Info.plist;
+				INFOPLIST_FILE = CATweakerTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_NAME = CATweakerTests;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CAMediaTimingFunctionBuilder.app/Contents/MacOS/CAMediaTimingFunctionBuilder";
@@ -384,7 +382,7 @@
 					"$(DEVELOPER_FRAMEWORKS_DIR)",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = CAMediaTimingFunctionBuilderTests/Info.plist;
+				INFOPLIST_FILE = CATweakerTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_NAME = CATweakerTests;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CAMediaTimingFunctionBuilder.app/Contents/MacOS/CAMediaTimingFunctionBuilder";
