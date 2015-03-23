@@ -42,9 +42,9 @@ This is tested on OS X 10.9.2 with Xcode 6.2.
 
 * It only works for constant point value, something like `[CAMediaTimingFunction functionWithControlPoints: abc/def : 0.1 : 0.15 : 0.9];` won't work.
 
-Credits
+## Credits
 
-This work is derived from the awesome [ColorSense](https://github.com/omz/ColorSense-for-Xcode) plugin of Ole Zorn. Thanks Ole!
+This work is derived from the awesome [ColorSense](https://github.com/omz/ColorSense-for-Xcode) plugin of Ole Zorn([@olemoritz](http://twitter.com/olemoritz)). Thanks Ole!
 
 ## License
 
