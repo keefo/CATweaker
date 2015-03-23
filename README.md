@@ -28,8 +28,6 @@ The plugin also adds some items to the _Edit_ menu to enable and to disable CATw
 ![alt Xcode Plugin](./plugin2.png)
 
 
-I'm [@lianxu](http://twitter.com/lianxu) on Twitter.
-
 ## Installation
 
 Simply build the Xcode project and restart Xcode. The plugin will automatically be installed in `~/Library/Application Support/Developer/Shared/Xcode/Plug-ins`. To uninstall, just remove the plugin from there (and restart Xcode).
@@ -49,6 +47,13 @@ I am planing to bring keyFrame animation into this plugin. So one can create mor
 ## Credits
 
 This work is derived from the awesome [ColorSense](https://github.com/omz/ColorSense-for-Xcode) plugin of Ole Zorn([@olemoritz](http://twitter.com/olemoritz)). Thanks Ole!
+
+## Creator
+
+**Xu Lian**
+
+- <https://twitter.com/lianxu>
+- <https://github.com/keefo>
 
 ## License
 
