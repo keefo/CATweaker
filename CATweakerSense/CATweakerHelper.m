@@ -30,6 +30,7 @@
     if (self = [super init]) {
         [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(applicationDidFinishLaunching:) name:NSApplicationDidFinishLaunchingNotification object:nil];
 
+        
         _timingFunctionWithNameRegex = [NSRegularExpression regularExpressionWithPattern:@"(\\[\\s*CAMediaTimingFunction\\s*functionWithName\\s*:\\s*(kCAMediaTimingFunctionLinear|kCAMediaTimingFunctionEaseIn|kCAMediaTimingFunctionEaseOut|kCAMediaTimingFunctionEaseInEaseOut|kCAMediaTimingFunctionDefault)\\s*\\])" options:0 error:NULL];
         
         _timingFunctionWithControlPointsRegex = [NSRegularExpression regularExpressionWithPattern:@"(\\[\\s*CAMediaTimingFunction\\s*functionWithControlPoints\\s*:\\s*([0-9]*\\.?[0-9]*f?)\\s*(\\/\\s*[0-9]*\\.?[0-9]*f?)?\\s*:\\s*([0-9]*\\.?[0-9]*f?)\\s*(\\/\\s*[0-9]*\\.?[0-9]*f?)?\\s*:\\s*([0-9]*\\.?[0-9]*f?)\\s*(\\/\\s*[0-9]*\\.?[0-9]*f?)?\\s*:\\s*([0-9]*\\.?[0-9]*f?)\\s*(\\/\\s*[0-9]*\\.?[0-9]*f?)?\\s*\\])" options:0 error:NULL];
