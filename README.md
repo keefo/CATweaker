@@ -56,7 +56,7 @@ I'm a Mac and iOS developer, the founder of  [Beyondcow](https://www.beyondcow.c
 
 - <https://twitter.com/lianxu>
 - <https://github.com/keefo>
-- <https://lianxu.me>
+- <http://lianxu.me>
 
 
 ## License
