@@ -14,9 +14,9 @@
 @interface CATweakerHelper : NSObject
 {
     CATFrameView *catFrameView;
-    NSRegularExpression *_timingFunctionWithNameRegex;
-    NSRegularExpression *_timingFunctionWithControlPointsRegex;
 }
-@property (nonatomic, strong) NSTextView *textView;
+@property (nonatomic, retain) NSTextView *textView;
+@property (nonatomic, retain) NSRegularExpression *timingFunctionWithNameRegex;
+@property (nonatomic, retain) NSRegularExpression *timingFunctionWithControlPointsRegex;
 
 @end

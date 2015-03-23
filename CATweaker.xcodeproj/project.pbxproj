@@ -11,6 +11,8 @@
 		A715630A1ABF43F800CBD1DC /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A71563071ABF43DA00CBD1DC /* QuartzCore.framework */; };
 		A715630C1ABF535800CBD1DC /* AppIcon.icns in Resources */ = {isa = PBXBuildFile; fileRef = A715630B1ABF535800CBD1DC /* AppIcon.icns */; };
 		A71726B11ABFCD54007DE3E2 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A71726B01ABFCD54007DE3E2 /* QuartzCore.framework */; };
+		A731F9ED1ABFFCEF00A09092 /* CATweakerHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = A79597A21ABFBD8C00B7EFE2 /* CATweakerHelper.m */; };
+		A731F9EE1ABFFCF800A09092 /* CATFrameView.m in Sources */ = {isa = PBXBuildFile; fileRef = A75512801ABFD79000D1424E /* CATFrameView.m */; };
 		A74B92B11ABE5F2B00AB08CE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A74B92B01ABE5F2B00AB08CE /* AppDelegate.m */; };
 		A74B92B31ABE5F2B00AB08CE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A74B92B21ABE5F2B00AB08CE /* main.m */; };
 		A74B92B51ABE5F2B00AB08CE /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A74B92B41ABE5F2B00AB08CE /* Images.xcassets */; };
@@ -23,6 +25,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		A731F9EB1ABFFB7F00A09092 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A74B92A21ABE5F2B00AB08CE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A79597961ABFB4D400B7EFE2;
+			remoteInfo = CATweakerSense;
+		};
 		A74B92BE1ABE5F2B00AB08CE /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = A74B92A21ABE5F2B00AB08CE /* Project object */;
@@ -168,10 +177,10 @@
 				A71726B01ABFCD54007DE3E2 /* QuartzCore.framework */,
 				A791F7491ABFDBF20020F9FD /* NSBezierPath+LXExtension.h */,
 				A791F74A1ABFDBF20020F9FD /* NSBezierPath+LXExtension.m */,
-				A79597A11ABFBD8C00B7EFE2 /* CATweakerHelper.h */,
-				A79597A21ABFBD8C00B7EFE2 /* CATweakerHelper.m */,
 				A755127F1ABFD79000D1424E /* CATFrameView.h */,
 				A75512801ABFD79000D1424E /* CATFrameView.m */,
+				A79597A11ABFBD8C00B7EFE2 /* CATweakerHelper.h */,
+				A79597A21ABFBD8C00B7EFE2 /* CATweakerHelper.m */,
 				A79597991ABFB4D400B7EFE2 /* Supporting Files */,
 			);
 			path = CATweakerSense;
@@ -199,6 +208,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				A731F9EC1ABFFB7F00A09092 /* PBXTargetDependency */,
 			);
 			name = CATweaker;
 			productName = CAMediaTimingFunctionBuilder;
@@ -325,6 +335,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				A74B92C41ABE5F2B00AB08CE /* CATweakerTests.m in Sources */,
+				A731F9ED1ABFFCEF00A09092 /* CATweakerHelper.m in Sources */,
+				A731F9EE1ABFFCF800A09092 /* CATFrameView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -341,6 +353,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		A731F9EC1ABFFB7F00A09092 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A79597961ABFB4D400B7EFE2 /* CATweakerSense */;
+			targetProxy = A731F9EB1ABFFB7F00A09092 /* PBXContainerItemProxy */;
+		};
 		A74B92BF1ABE5F2B00AB08CE /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = A74B92A91ABE5F2B00AB08CE /* CATweaker */;
