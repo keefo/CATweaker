@@ -153,17 +153,13 @@
             CAMediaTimingFunction *matchedFunction = [self timingFunctionInText:line selectedRange:selectedRangeInLine matchedRange:&functionRange];
             
             if (matchedFunction) {
-                
-                NSString *desc = matchedFunction.description;
-                
-                NSLog(@"matchedFunction=%@", desc);
-                
+          
                 if (!catFrameView) {
                     catFrameView = [[CATFrameView alloc] initWithFrame:NSZeroRect];
                 }
                 
                 NSRange selectedFunctionRange = NSMakeRange(functionRange.location + lineRange.location, functionRange.length);
-                NSRect selectionRectOnScreen = [self.textView firstRectForCharacterRange:selectedFunctionRange];
+                 NSRect selectionRectOnScreen = [self.textView firstRectForCharacterRange:selectedFunctionRange actualRange:NULL];
                 NSRect selectionRectInWindow = [self.textView.window convertRectFromScreen:selectionRectOnScreen];
                 NSRect selectionRectInView = [self.textView convertRect:selectionRectInWindow fromView:nil];
                 
