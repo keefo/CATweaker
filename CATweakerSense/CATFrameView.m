@@ -94,6 +94,7 @@
     NSPoint loc   = [self convertPoint:[theEvent locationInWindow] fromView:nil];
     if (NSPointInRect(loc, [self _buttonRect])) {
         NSLog(@"mouseUp");
+        
     }
     else{
         [super mouseDown:theEvent];

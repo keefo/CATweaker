@@ -2,10 +2,13 @@
 
 <img src="./AppIcon.png" width="200" />
 
+## Overview
+
 A helper tool for tweaking CAMediaTimingFunction
 
 ![alt Window](./poster.jpg)
 
+CATweaker comes with a Xcode plugin:
 
 # CATweakerSense for Xcode
 
