@@ -1,0 +1,4 @@
+language: objective-c
+xcode_project: CATweaker.xcodeproj
+xcode_scheme: CATweaker
+
