@@ -8,7 +8,7 @@ A helper tool for creating beautiful CAMediaTimingFunction curve.
 
 ![alt Window](./poster.jpg)
 
-CATweaker come with a Xcode plugin:
+CATweaker come with an Xcode plugin:
 
 # CATweakerSense for Xcode
 
