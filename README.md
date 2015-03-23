@@ -8,7 +8,7 @@ A helper tool for creating beautiful CAMediaTimingFunction curve.
 
 ![alt Window](./poster.jpg)
 
-CATweaker come with an Xcode plugin:
+CATweaker comes with an Xcode plugin:
 
 # CATweakerSense for Xcode
 
@@ -46,7 +46,7 @@ This is tested on OS X 10.9.2 with Xcode 6.2.
 
 ## Next move
 
-I am planing to bring keyFrame animation into this plugin. So one can create more complex animation like "spring", "decay", "path" through the popover adjuster. If you have some great ideas, I am more than happy to hear from you.
+I am planing to bring keyFrame animation into this plugin. So one can create more complex animation like "spring", "decay", "along path" through the popover adjuster. If you have some great ideas, I am more than happy to hear from you.
 
 ## Credits
 
