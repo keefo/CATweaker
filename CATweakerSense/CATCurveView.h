@@ -19,8 +19,11 @@
     CATDragDotOnCurveView *dot1;
     CATDragDotOnCurveView *dot2;
 }
+@property(assign) id delegate;
 
 - (NSPoint)controlPoint1;
 - (NSPoint)controlPoint2;
+
+- (void)setTimingFunction:(CAMediaTimingFunction*)fun;
 
 @end

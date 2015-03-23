@@ -13,6 +13,7 @@
 @end
 
 @interface CATFrameView : NSView
+@property(assign) id helper;
 @property(readonly) int buttonHeight;
 @property(nonatomic, retain) CAMediaTimingFunction *timingFunction;
 @property(nonatomic, retain) NSColor *strokeColor;

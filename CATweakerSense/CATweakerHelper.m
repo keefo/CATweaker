@@ -9,10 +9,14 @@
 #import "CATweakerHelper.h"
 #import <QuartzCore/QuartzCore.h>
 #import "CATFrameView.h"
+#import "CATCurveView.h"
 
 #define kCATweakerHelperHighlightingDisabled  @"LXCATweakerHelperHighlightingDisabled"
 
 @implementation CATweakerHelper
+{
+    NSRange _selectedFunctionRange;
+}
 
 #pragma mark - Plugin Initialization
 
@@ -141,6 +145,8 @@
         BOOL disabled = [[NSUserDefaults standardUserDefaults] boolForKey:kCATweakerHelperHighlightingDisabled];
         if (disabled) return;
         
+        _selectedFunctionRange = NSMakeRange(NSNotFound, 0);
+        
         NSArray *selectedRanges = [self.textView selectedRanges];
         if (selectedRanges.count >= 1) {
             NSRange selectedRange = [[selectedRanges objectAtIndex:0] rangeValue];
@@ -154,8 +160,11 @@
             
             if (matchedFunction) {
           
+                _selectedFunctionRange = NSMakeRange(functionRange.location + lineRange.location, functionRange.length);;
+                
                 if (!catFrameView) {
                     catFrameView = [[CATFrameView alloc] initWithFrame:NSZeroRect];
+                    catFrameView.helper = self;
                 }
                 
                 NSRange selectedFunctionRange = NSMakeRange(functionRange.location + lineRange.location, functionRange.length);
@@ -180,6 +189,22 @@
     }
 }
 
+- (void)pointChanged:(CATCurveView*)view
+{
+    if (_selectedFunctionRange.location == NSNotFound) {
+        return;
+    }
+    
+    NSPoint p1 = view.controlPoint1;
+    NSPoint p2 = view.controlPoint2;
+    
+    NSString *string = [NSString stringWithFormat:@"[CAMediaTimingFunction functionWithControlPoints: %.3f : %.3f : %.3f : %.3f]", p1.x, p1.y, p2.x, p2.y];
+    
+    [self.textView.undoManager beginUndoGrouping];
+    [self.textView insertText:string replacementRange:_selectedFunctionRange];
+    [self.textView.undoManager endUndoGrouping];
+    
+}
 
 #pragma mark - timingFunction String Parsing
 

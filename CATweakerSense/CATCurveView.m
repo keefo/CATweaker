@@ -6,6 +6,7 @@
 //  Copyright (c) 2015 Beyondcow. All rights reserved.
 //
 
+#import <QuartzCore/QuartzCore.h>
 #import "CATCurveView.h"
 
 #define MARGIN 18
@@ -86,7 +87,20 @@
  */
 - (NSPoint)controlPoint1;
 {
-    return NSMakePoint(fabs(dot1.frame.origin.x-[self _begPoint].x)/fabs([self _begPoint].x-[self _endPoint].x), fabs(dot1.frame.origin.y-[self _begPoint].y)/fabs([self _begPoint].y-[self _endPoint].y));
+    NSPoint p = NSMakePoint((dot1.frame.origin.x-[self _begPoint].x)/fabs([self _begPoint].x-[self _endPoint].x), (dot1.frame.origin.y-[self _begPoint].y)/fabs([self _begPoint].y-[self _endPoint].y));
+    if (p.x<0) {
+        p.x=0;
+    }
+    if (p.y<0) {
+        p.y=0;
+    }
+    if (p.x>1) {
+        p.x=1;
+    }
+    if (p.y>1) {
+        p.y=1;
+    }
+    return p;
 }
 
 /*
@@ -95,7 +109,40 @@
  */
 - (NSPoint)controlPoint2;
 {
-    return NSMakePoint(fabs(dot2.frame.origin.x-[self _begPoint].x)/fabs([self _begPoint].x-[self _endPoint].x), fabs(dot2.frame.origin.y-[self _begPoint].y)/fabs([self _begPoint].y-[self _endPoint].y));
+    NSPoint p = NSMakePoint((dot2.frame.origin.x-[self _begPoint].x)/fabs([self _begPoint].x-[self _endPoint].x), (dot2.frame.origin.y-[self _begPoint].y)/fabs([self _begPoint].y-[self _endPoint].y));
+    if (p.x<0) {
+        p.x=0;
+    }
+    if (p.y<0) {
+        p.y=0;
+    }
+    if (p.x>1) {
+        p.x=1;
+    }
+    if (p.y>1) {
+        p.y=1;
+    }
+    return p;
+}
+
+- (void)setTimingFunction:(CAMediaTimingFunction*)timingFunction;
+{
+    float p0[2],p1[2],p2[2],p3[2];
+    
+    [timingFunction getControlPointAtIndex:0 values:p0];
+    [timingFunction getControlPointAtIndex:1 values:p1];
+    [timingFunction getControlPointAtIndex:2 values:p2];
+    [timingFunction getControlPointAtIndex:3 values:p3];
+
+    NSPoint beg = [self _begPoint];
+    NSPoint end = [self _endPoint];
+    float width =  fabs(end.x - beg.x);
+    float height = fabs(end.y - beg.y);
+    
+    [dot1 setFrameOrigin:NSMakePoint(beg.x + width * p1[0] - dot1.bounds.size.width/2.0, beg.y + height * p1[1] - dot1.bounds.size.height/2.0)];
+    [dot2 setFrameOrigin:NSMakePoint(beg.x + width * p2[0] - dot1.bounds.size.width/2.0, beg.y + height * p2[1] - dot1.bounds.size.height/2.0)];
+    
+    [self setNeedsDisplay:YES];
 }
 
 #pragma mark -
@@ -241,8 +288,7 @@
         [self setNeedsDisplay:YES];
         
         // post notification for generating function
-        [[NSNotificationCenter defaultCenter] postNotificationName:@"PointChangeNotification" object:nil];
-        [[NSNotificationCenter defaultCenter] postNotificationName:@"PointChangedNotification" object:nil];
+        [_delegate performSelector:@selector(pointChanged:) withObject:self];
         
         // register undo method
         [self _storeLastPoint:[NSString stringWithFormat:@"%d|%@", draggingTargetDot==dot1?1:2, NSStringFromPoint(targetDotStartingFrame.origin)]];
@@ -262,8 +308,7 @@
         //redraw chart
         [self setNeedsDisplay:YES];
         
-        // post notification for generating function
-        [[NSNotificationCenter defaultCenter] postNotificationName:@"PointChangeNotification" object:nil];
+        [_delegate performSelector:@selector(pointChanged:) withObject:self];
     }
 }
 
@@ -287,8 +332,7 @@
     [self setNeedsDisplay:YES];
     
     // post notification for generating function
-    [[NSNotificationCenter defaultCenter] postNotificationName:@"PointChangeNotification" object:nil];
-    [[NSNotificationCenter defaultCenter] postNotificationName:@"PointChangedNotification" object:nil];
+    [_delegate performSelector:@selector(pointChanged:) withObject:self];
 }
 
 - (void)_storeLastPoint:(NSString*)lastPointStr

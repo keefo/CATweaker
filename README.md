@@ -23,7 +23,10 @@ CATweakerSense is like ColorSense, but it lets you pick a CAMediaTimingFunction 
 The plugin also adds some items to the _Edit_ menu to enable and to disable CATweakerSense temporarily. These menu items have no keyboard shortcuts by default, but you can set them via the system's keyboard preferences (Xcode's own preferences won't show them).
 
 
-![alt Xcode Plugin](./plugin.png)
+![alt Xcode Plugin](./plugin1.png)
+
+![alt Xcode Plugin](./plugin2.png)
+
 
 I'm [@lianxu](http://twitter.com/lianxu) on Twitter.
 
