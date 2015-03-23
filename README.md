@@ -30,9 +30,11 @@ The plugin also adds some items to the _Edit_ menu to enable and to disable CATw
 
 ## Installation
 
-The best way of installing is by [Alcatraz](http://alcatraz.io). Install Alcatraz followed by the instruction, restart your Xcode and press `⇧⌘9`. You can find `CATweakerSense` in the list and click the icon on left to install.
+Install via [Alcatraz](http://alcatraz.io).
 
-Or simply build the Xcode project and restart Xcode. The plugin will automatically be installed in `~/Library/Application Support/Developer/Shared/Xcode/Plug-ins`. To uninstall, just remove the plugin from there (and restart Xcode).
+Or
+
+Simply build the Xcode project and restart Xcode. The plugin will automatically be installed in `~/Library/Application Support/Developer/Shared/Xcode/Plug-ins`. To uninstall, just remove the plugin from there (and restart Xcode).
 
 If you get a "Permission Denied" error while building, please see [this issue](https://github.com/omz/ColorSense-for-Xcode/issues/1).
 
