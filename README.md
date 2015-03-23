@@ -4,7 +4,7 @@
 
 ## Overview
 
-A helper tool for tweaking CAMediaTimingFunction
+A helper tool for creating beautiful CAMediaTimingFunction curve.
 
 ![alt Window](./poster.jpg)
 
