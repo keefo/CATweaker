@@ -176,6 +176,7 @@
                 catFrameView.frame = NSInsetRect(NSIntegralRect(selectionRectInView), -1, -1);
                 catFrameView.frame = NSMakeRect(catFrameView.frame.origin.x, catFrameView.frame.origin.y-catFrameView.buttonHeight, catFrameView.frame.size.width, catFrameView.frame.size.height+catFrameView.buttonHeight);
                 catFrameView.timingFunction = matchedFunction;
+                [catFrameView closePopover];
                 
                 [self.textView addSubview:catFrameView];
                 

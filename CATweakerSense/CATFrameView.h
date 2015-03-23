@@ -18,4 +18,6 @@
 @property(nonatomic, retain) CAMediaTimingFunction *timingFunction;
 @property(nonatomic, retain) NSColor *strokeColor;
 
+- (void)closePopover;
+
 @end

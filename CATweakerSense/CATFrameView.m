@@ -143,6 +143,10 @@
     }
 }
 
+- (void)closePopover
+{
+    [popover close];
+}
 
 - (void)removeFromSuperview
 {
