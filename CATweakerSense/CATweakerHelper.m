@@ -10,7 +10,6 @@
 #import <QuartzCore/QuartzCore.h>
 #import "CATFrameView.h"
 
-
 #define kCATweakerHelperHighlightingDisabled  @"LXCATweakerHelperHighlightingDisabled"
 
 @implementation CATweakerHelper
@@ -51,22 +50,6 @@
                                                                           keyEquivalent:@""];
         [toggleColorHighlightingMenuItem setTarget:self];
         [[editMenuItem submenu] addItem:toggleColorHighlightingMenuItem];
-        
-//        NSMenuItem *colorInsertionModeItem = [[NSMenuItem alloc] initWithTitle:@"Animation Curve Mode" action:nil keyEquivalent:@""];
-//        NSMenuItem *colorInsertionModeNSItem = [[NSMenuItem alloc] initWithTitle:@"NSColor" action:@selector(selectNSColorInsertionMode:) keyEquivalent:@""];
-//        [colorInsertionModeNSItem setTarget:self];
-//        NSMenuItem *colorInsertionModeUIItem = [[NSMenuItem alloc] initWithTitle:@"UIColor" action:@selector(selectUIColorInsertionMode:) keyEquivalent:@""];
-//        [colorInsertionModeUIItem setTarget:self];
-//        
-//        NSMenu *colorInsertionModeMenu = [[NSMenu alloc] initWithTitle:@"Color Insertion Mode"];
-//        [colorInsertionModeItem setSubmenu:colorInsertionModeMenu];
-//        [[colorInsertionModeItem submenu] addItem:colorInsertionModeUIItem];
-//        [[colorInsertionModeItem submenu] addItem:colorInsertionModeNSItem];
-//        [[editMenuItem submenu] addItem:colorInsertionModeItem];
-//        
-//        NSMenuItem *insertColorMenuItem = [[NSMenuItem alloc] initWithTitle:@"Insert Animation TimeingFunction..." action:@selector(insertColor:) keyEquivalent:@""];
-//        [insertColorMenuItem setTarget:self];
-//        [[editMenuItem submenu] addItem:insertColorMenuItem];
     }
     
     BOOL enabled = ![[NSUserDefaults standardUserDefaults] boolForKey:kCATweakerHelperHighlightingDisabled];
@@ -79,14 +62,6 @@
 - (void)dismissCurveView
 {
     [catFrameView removeFromSuperview];
-//    if (self.colorWell.isActive) {
-//        [self.colorWell deactivate];
-//        [[NSColorPanel sharedColorPanel] orderOut:nil];
-//    }
-//    [self.colorWell removeFromSuperview];
-//    [self.colorFrameView removeFromSuperview];
-//    self.selectedColorRange = NSMakeRange(NSNotFound, 0);
-//    self.selectedColorType = OMColorTypeNone;
 }
 
 #pragma mark - Preferences
@@ -111,21 +86,6 @@
         [self deactivateCAT];
     }
 }
-
-//- (void)selectNSColorInsertionMode:(id)sender
-//{
-//    
-//}
-//
-//- (void)insertColor:(id)sender
-//{
-//    
-//}
-//
-//- (void)selectUIColorInsertionMode:(id)sender
-//{
-//    
-//}
 
 - (void)activateCAT
 {
@@ -179,27 +139,6 @@
         self.textView = (NSTextView *)[notification object];
         BOOL disabled = [[NSUserDefaults standardUserDefaults] boolForKey:kCATweakerHelperHighlightingDisabled];
         if (disabled) return;
-        
-        [NSColor colorWithCalibratedRed:0.842 green:0.000 blue:0.009 alpha:1.000];
-        
-        
-        CAMediaTimingFunction *fun1 = [CAMediaTimingFunction functionWithControlPoints: 0.016667 : 0.653333 : 0.150000 : 0.960000];
-        CAMediaTimingFunction *fun2 = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionLinear];
-        CAMediaTimingFunction *fun3 = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseIn];
-        CAMediaTimingFunction *fun4 = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
-        CAMediaTimingFunction *fun5 = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseOut];
-        CAMediaTimingFunction *fun6 = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionDefault];
-
-        
-        
-        
-        
-        fun1;
-        fun2;
-        fun3;
-        fun4;
-        fun5;
-        fun6;
         
         NSArray *selectedRanges = [self.textView selectedRanges];
         if (selectedRanges.count >= 1) {
@@ -296,19 +235,13 @@
             *stop = YES;
         }
     }];
-    
-    NSLog(@"foundFunction0=%@", foundFunction);
-    
+
     if (!foundFunction) {
-        
-        NSLog(@"!foundFunction");
-        
+
         [_timingFunctionWithControlPointsRegex enumerateMatchesInString:text options:0 range:NSMakeRange(0, text.length) usingBlock:^(NSTextCheckingResult *result, NSMatchingFlags flags, BOOL *stop) {
             
             NSRange functionRange = [result range];
-            NSLog(@"functionRange = %@", NSStringFromRange(functionRange));
-            NSLog(@"selectedRange = %@", NSStringFromRange(selectedRange));
-            
+   
             if (selectedRange.location >= functionRange.location && NSMaxRange(selectedRange) <= NSMaxRange(functionRange)) {
                 double p1x = [[text substringWithRange:[result rangeAtIndex:2]] doubleValue];
                 p1x = [self dividedValue:p1x withDivisorRange:[result rangeAtIndex:3] inString:text];

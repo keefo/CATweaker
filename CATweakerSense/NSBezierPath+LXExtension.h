@@ -2,7 +2,7 @@
 //  NSBezierPath.h
 //  iYY
 //
-//  Created by yidi on 02/07/10.
+//  Created by Keefo on 02/07/10.
 //  Copyright 2010 Beyondcow. All rights reserved.
 //
 #import <Cocoa/Cocoa.h>
@@ -25,11 +25,5 @@
 
 - (void)strokeInside;
 - (void)strokeInsideWithinRect:(NSRect)clipRect;
-
-//- (CGPathRef)quartzPath;
-//- (CGMutablePathRef)mutableQuartzPath;
-
-//+ (CGPathRef)CGPathForRect:(CGRect)rect radius:(CGFloat)radius;
-
 
 @end
