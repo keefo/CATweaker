@@ -8,7 +8,7 @@ A helper tool for tweaking CAMediaTimingFunction
 
 ![alt Window](./poster.jpg)
 
-CATweaker comes with a Xcode plugin:
+CATweaker come with a Xcode plugin:
 
 # CATweakerSense for Xcode
 
