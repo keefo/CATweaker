@@ -8,15 +8,35 @@
 
 #import <QuartzCore/QuartzCore.h>
 #import "CATFrameView.h"
+#import "CATCurveView.h"
 #import "NSBezierPath+LXExtension.h"
 
+@implementation CurveViewController
+
+
+@end
+
+
 @implementation CATFrameView
+{
+    NSPopover *popover;
+    CurveViewController *curveViewController;
+}
 
 - (id)initWithFrame:(NSRect)frameRect
 {
     if (self=[super initWithFrame:frameRect]) {
         _buttonHeight = 17;
         _strokeColor = [NSColor blackColor];
+        if (!popover) {
+            popover = [[NSPopover alloc] init];
+            curveViewController = [[CurveViewController alloc] init];
+            curveViewController.view = [[CATCurveView alloc] initWithFrame:NSMakeRect(0, 0, VIEW_WIDTH, VIEW_WIDTH)];
+            popover.contentViewController = curveViewController;
+            popover.contentSize = NSMakeSize(VIEW_WIDTH, VIEW_WIDTH);
+            popover.animates = YES;
+            [curveViewController loadView];
+        }
     }
     return self;
 }
@@ -93,8 +113,6 @@
 {
     NSPoint loc   = [self convertPoint:[theEvent locationInWindow] fromView:nil];
     if (NSPointInRect(loc, [self _buttonRect])) {
-        NSLog(@"mouseDown");
-        
     }
     else{
         [super mouseDown:theEvent];
@@ -103,9 +121,11 @@
 
 - (void)mouseUp:(NSEvent *)theEvent
 {
+    CAMediaTimingFunction *fun = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionLinear];
+    
     NSPoint loc   = [self convertPoint:[theEvent locationInWindow] fromView:nil];
     if (NSPointInRect(loc, [self _buttonRect])) {
-        NSLog(@"mouseUp");
+        [popover showRelativeToRect:[self _buttonRect] ofView:self preferredEdge:NSMaxYEdge];
     }
     else{
         [super mouseUp:theEvent];

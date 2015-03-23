@@ -8,6 +8,10 @@
 
 #import <Cocoa/Cocoa.h>
 
+@interface CurveViewController : NSViewController
+
+@end
+
 @interface CATFrameView : NSView
 @property(readonly) int buttonHeight;
 @property(nonatomic, retain) CAMediaTimingFunction *timingFunction;

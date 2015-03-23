@@ -20,6 +20,7 @@
 		A74B92C41ABE5F2B00AB08CE /* CATweakerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A74B92C31ABE5F2B00AB08CE /* CATweakerTests.m */; };
 		A74B92D11ABE602900AB08CE /* CurveView.m in Sources */ = {isa = PBXBuildFile; fileRef = A74B92D01ABE602900AB08CE /* CurveView.m */; };
 		A75512811ABFD79000D1424E /* CATFrameView.m in Sources */ = {isa = PBXBuildFile; fileRef = A75512801ABFD79000D1424E /* CATFrameView.m */; };
+		A75DF6901AC0074E0065E137 /* CATCurveView.m in Sources */ = {isa = PBXBuildFile; fileRef = A75DF68F1AC0074E0065E137 /* CATCurveView.m */; };
 		A791F74B1ABFDBF20020F9FD /* NSBezierPath+LXExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = A791F74A1ABFDBF20020F9FD /* NSBezierPath+LXExtension.m */; };
 		A79597A31ABFBD8C00B7EFE2 /* CATweakerHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = A79597A21ABFBD8C00B7EFE2 /* CATweakerHelper.m */; };
 /* End PBXBuildFile section */
@@ -62,6 +63,8 @@
 		A74B92D01ABE602900AB08CE /* CurveView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CurveView.m; sourceTree = "<group>"; };
 		A755127F1ABFD79000D1424E /* CATFrameView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CATFrameView.h; sourceTree = "<group>"; };
 		A75512801ABFD79000D1424E /* CATFrameView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CATFrameView.m; sourceTree = "<group>"; };
+		A75DF68E1AC0074E0065E137 /* CATCurveView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CATCurveView.h; sourceTree = "<group>"; };
+		A75DF68F1AC0074E0065E137 /* CATCurveView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CATCurveView.m; sourceTree = "<group>"; };
 		A791F7491ABFDBF20020F9FD /* NSBezierPath+LXExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSBezierPath+LXExtension.h"; sourceTree = "<group>"; };
 		A791F74A1ABFDBF20020F9FD /* NSBezierPath+LXExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSBezierPath+LXExtension.m"; sourceTree = "<group>"; };
 		A79597971ABFB4D400B7EFE2 /* CATweakerSense.xcplugin */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CATweakerSense.xcplugin; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -177,6 +180,8 @@
 				A71726B01ABFCD54007DE3E2 /* QuartzCore.framework */,
 				A791F7491ABFDBF20020F9FD /* NSBezierPath+LXExtension.h */,
 				A791F74A1ABFDBF20020F9FD /* NSBezierPath+LXExtension.m */,
+				A75DF68E1AC0074E0065E137 /* CATCurveView.h */,
+				A75DF68F1AC0074E0065E137 /* CATCurveView.m */,
 				A755127F1ABFD79000D1424E /* CATFrameView.h */,
 				A75512801ABFD79000D1424E /* CATFrameView.m */,
 				A79597A11ABFBD8C00B7EFE2 /* CATweakerHelper.h */,
@@ -345,6 +350,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A79597A31ABFBD8C00B7EFE2 /* CATweakerHelper.m in Sources */,
+				A75DF6901AC0074E0065E137 /* CATCurveView.m in Sources */,
 				A791F74B1ABFDBF20020F9FD /* NSBezierPath+LXExtension.m in Sources */,
 				A75512811ABFD79000D1424E /* CATFrameView.m in Sources */,
 			);

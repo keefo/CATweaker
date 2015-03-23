@@ -1,16 +1,16 @@
 //
-//  CurveView.m
+//  CATCurveView.m
 //  CATweaker
 //
 //  Created by X on 2015-03-21.
 //  Copyright (c) 2015 Beyondcow. All rights reserved.
 //
 
-#import "CurveView.h"
+#import "CATCurveView.h"
 
-#define MARGIN 40
+#define MARGIN 18
 
-@implementation DragDotOnCurveView
+@implementation CATDragDotOnCurveView
 
 - (void)drawRect:(NSRect)dirtyRect {
     [super drawRect:dirtyRect];
@@ -44,11 +44,11 @@
 
 @end
 
-@implementation CurveView
+@implementation CATCurveView
 {
     NSTrackingArea *trackingArea;
     
-    DragDotOnCurveView *draggingTargetDot;
+    CATDragDotOnCurveView *draggingTargetDot;
     NSRect targetDotStartingFrame;
     NSPoint mouseDownStartingPoint;
 }
@@ -66,27 +66,18 @@
     [self addTrackingArea:trackingArea];
 }
 
-- (void)awakeFromNib
+- (id)initWithFrame:(NSRect)frameRect
 {
-    [self updateTrackingAreas];
-    dot1 = [[DragDotOnCurveView alloc] initWithFrame:NSMakeRect(30, 30, 20, 20)];
-    dot2 = [[DragDotOnCurveView alloc] initWithFrame:NSMakeRect(200, 200, 20, 20)];
-    
-    [dot1 setFrameOrigin:NSPointFromString([[NSUserDefaults standardUserDefaults] objectForKey:@"dot1Origin"])];
-    [dot2 setFrameOrigin:NSPointFromString([[NSUserDefaults standardUserDefaults] objectForKey:@"dot2Origin"])];
-    
-    if (!NSPointInRect(dot1.frame.origin, self.bounds)) {
-        [[NSUserDefaults standardUserDefaults] removeObjectForKey:@"dot1Origin"];
-        [dot1 setFrameOrigin:NSPointFromString([[NSUserDefaults standardUserDefaults] objectForKey:@"dot1Origin"])];
+    if (self = [super initWithFrame:frameRect]) {
+        [self updateTrackingAreas];
+        
+        dot1 = [[CATDragDotOnCurveView alloc] initWithFrame:NSMakeRect(VIEW_WIDTH*0.3, VIEW_WIDTH*0.2, 20, 20)];
+        dot2 = [[CATDragDotOnCurveView alloc] initWithFrame:NSMakeRect(VIEW_WIDTH*0.7, VIEW_WIDTH*0.6, 20, 20)];
+        
+        [self addSubview:dot1];
+        [self addSubview:dot2];
     }
-    
-    if (!NSPointInRect(dot2.frame.origin, self.bounds)) {
-        [[NSUserDefaults standardUserDefaults] removeObjectForKey:@"dot2Origin"];
-        [dot2 setFrameOrigin:NSPointFromString([[NSUserDefaults standardUserDefaults] objectForKey:@"dot2Origin"])];
-    }
-    
-    [self addSubview:dot1];
-    [self addSubview:dot2];
+    return self;
 }
 
 /*
@@ -132,33 +123,31 @@
     [super drawRect:dirtyRect];
     
     // draw background and border
-    [[NSColor grayColor] setFill];
-    NSRectFill(NSInsetRect(self.bounds, 0, 0));
-    [[NSColor colorWithDeviceWhite:0.97 alpha:1] setFill];
-    NSRectFill(NSInsetRect(self.bounds, 1, 1));
+    //[[NSColor colorWithDeviceWhite:1 alpha:1] setFill];
+    //NSRectFill(self.bounds);
     
     NSPoint point1 = NSMakePoint(NSMidX(dot1.frame), NSMidY(dot1.frame));
     NSPoint point2 = NSMakePoint(NSMidX(dot2.frame), NSMidY(dot2.frame));
     NSPoint begPoint = [self _begPoint];
     NSPoint endPoint = [self _endPoint];
     
-    int lineWidth = 2;
+    int lineWidth = 1;
     
     // draw y-axis
     [[NSColor lightGrayColor] setStroke];
     NSBezierPath *line = [NSBezierPath bezierPath];
-    [line moveToPoint:NSMakePoint(begPoint.x, begPoint.y-20)];
+    [line moveToPoint:NSMakePoint(begPoint.x, begPoint.y-VIEW_WIDTH*0.05)];
     [line lineToPoint:NSMakePoint(begPoint.x, endPoint.y)];
     [line setLineCapStyle:NSSquareLineCapStyle];
-    [line setLineWidth:3];
+    [line setLineWidth:2];
     [line stroke];
     
     // draw x-axis
     line = [NSBezierPath bezierPath];
-    [line moveToPoint:NSMakePoint(begPoint.x-20, begPoint.y)];
+    [line moveToPoint:NSMakePoint(begPoint.x-VIEW_WIDTH*0.05, begPoint.y)];
     [line lineToPoint:NSMakePoint(endPoint.x, begPoint.y)];
     [line setLineCapStyle:NSSquareLineCapStyle];
-    [line setLineWidth:3];
+    [line setLineWidth:2];
     [line stroke];
     
     // draw a line from start point to the first control point
@@ -178,10 +167,11 @@
     [p2 setLineWidth:lineWidth];
     [p2 stroke];
 
+    
     // draw our sweet Bezier path in blue color
     [[NSColor colorWithCalibratedRed:0.321 green:0.470 blue:0.684 alpha:1.000] setStroke];
     NSBezierPath *curve = [NSBezierPath bezierPath];
-    [curve setLineWidth:3];
+    [curve setLineWidth:2];
     [curve moveToPoint:begPoint];
     [curve curveToPoint:endPoint controlPoint1:point1 controlPoint2:point2];
     [curve stroke];
@@ -207,15 +197,15 @@
     if (x<0) {
         x=0;
     }
-    if (x>NSMaxX(self.bounds)-20) {
-        x=NSMaxX(self.bounds)-20;
+    if (x>NSMaxX(self.bounds)-VIEW_WIDTH*0.05) {
+        x=NSMaxX(self.bounds)-VIEW_WIDTH*0.05;
     }
     int y = targetDotStartingFrame.origin.y+(point.y-mouseDownStartingPoint.y);
     if (y<0) {
         y=0;
     }
-    if (y>NSMaxY(self.bounds)-20) {
-        y=NSMaxY(self.bounds)-20;
+    if (y>NSMaxY(self.bounds)-VIEW_WIDTH*0.05) {
+        y=NSMaxY(self.bounds)-VIEW_WIDTH*0.05;
     }
     return NSMakePoint(x, y);
 }
@@ -225,8 +215,8 @@
     draggingTargetDot = nil;
     NSPoint point = [self convertPoint:[theEvent locationInWindow] fromView:nil];
     NSView *v = [self _myHitTest:point];
-    if ([v isKindOfClass:[DragDotOnCurveView class]]) {
-        draggingTargetDot = (DragDotOnCurveView*)v;
+    if ([v isKindOfClass:[CATDragDotOnCurveView class]]) {
+        draggingTargetDot = (CATDragDotOnCurveView*)v;
         draggingTargetDot.mouseDown = YES;
         mouseDownStartingPoint = point;
         targetDotStartingFrame = draggingTargetDot.frame;
@@ -246,14 +236,7 @@
         draggingTargetDot.mouseDown = NO;
         [draggingTargetDot setFrameOrigin:point];
         [draggingTargetDot setNeedsDisplay:YES];
-        
-        if (draggingTargetDot==dot1) {
-            [[NSUserDefaults standardUserDefaults] setObject:NSStringFromPoint(dot1.frame.origin) forKey:@"dot1Origin"];
-        }
-        else if (draggingTargetDot==dot2) {
-            [[NSUserDefaults standardUserDefaults] setObject:NSStringFromPoint(dot2.frame.origin) forKey:@"dot2Origin"];
-        }
-        
+
         // redraw chart
         [self setNeedsDisplay:YES];
         
@@ -295,11 +278,9 @@
     NSPoint lastPoint = NSPointFromString(lastPointStr);
     if ([target isEqualTo:@"1"]) {
         [dot1 setFrameOrigin:lastPoint];
-        [[NSUserDefaults standardUserDefaults] setObject:NSStringFromPoint(lastPoint) forKey:@"dot1Origin"];
     }
     else if ([target isEqualTo:@"2"]) {
         [dot2 setFrameOrigin:lastPoint];
-        [[NSUserDefaults standardUserDefaults] setObject:NSStringFromPoint(lastPoint) forKey:@"dot2Origin"];
     }
     
     // redraw chart
@@ -308,7 +289,6 @@
     // post notification for generating function
     [[NSNotificationCenter defaultCenter] postNotificationName:@"PointChangeNotification" object:nil];
     [[NSNotificationCenter defaultCenter] postNotificationName:@"PointChangedNotification" object:nil];
-    
 }
 
 - (void)_storeLastPoint:(NSString*)lastPointStr
