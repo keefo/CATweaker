@@ -42,7 +42,6 @@
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
     // Insert code here to initialize your application
     
-    [_curveView setSaveToDefault:YES];
     [_textView setTextContainerInset:NSMakeSize(5, 8)];
     NSNotificationCenter* nc = [NSNotificationCenter defaultCenter];
     

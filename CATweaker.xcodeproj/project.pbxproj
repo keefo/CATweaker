@@ -23,6 +23,7 @@
 		A75DF6901AC0074E0065E137 /* CATCurveView.m in Sources */ = {isa = PBXBuildFile; fileRef = A75DF68F1AC0074E0065E137 /* CATCurveView.m */; };
 		A791F74B1ABFDBF20020F9FD /* NSBezierPath+LXExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = A791F74A1ABFDBF20020F9FD /* NSBezierPath+LXExtension.m */; };
 		A79597A31ABFBD8C00B7EFE2 /* CATweakerHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = A79597A21ABFBD8C00B7EFE2 /* CATweakerHelper.m */; };
+		A7B0A0941AC0196600C31D29 /* CATCurveView.m in Sources */ = {isa = PBXBuildFile; fileRef = A75DF68F1AC0074E0065E137 /* CATCurveView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -341,6 +342,7 @@
 			files = (
 				A74B92C41ABE5F2B00AB08CE /* CATweakerTests.m in Sources */,
 				A731F9ED1ABFFCEF00A09092 /* CATweakerHelper.m in Sources */,
+				A7B0A0941AC0196600C31D29 /* CATCurveView.m in Sources */,
 				A731F9EE1ABFFCF800A09092 /* CATFrameView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
