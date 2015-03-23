@@ -130,8 +130,6 @@
 
 - (void)mouseUp:(NSEvent *)theEvent
 {
-    CAMediaTimingFunction *fun = [CAMediaTimingFunction functionWithControlPoints: 0.097 : 0.521 : 0.743 : 0.181];
-    
     NSPoint loc   = [self convertPoint:[theEvent locationInWindow] fromView:nil];
     if (NSPointInRect(loc, [self _buttonRect])) {
         if (_timingFunction) {
@@ -143,7 +141,6 @@
     else{
         [super mouseUp:theEvent];
     }
-    
 }
 
 
