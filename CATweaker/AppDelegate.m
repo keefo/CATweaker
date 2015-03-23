@@ -40,7 +40,6 @@
 #pragma mark - AppDelegate
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
-    // Insert code here to initialize your application
     
     [_textView setTextContainerInset:NSMakeSize(5, 8)];
     NSNotificationCenter* nc = [NSNotificationCenter defaultCenter];
