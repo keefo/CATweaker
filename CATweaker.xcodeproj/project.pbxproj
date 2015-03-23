@@ -10,12 +10,16 @@
 		A71563011ABF402800CBD1DC /* DemoView.m in Sources */ = {isa = PBXBuildFile; fileRef = A71563001ABF402800CBD1DC /* DemoView.m */; };
 		A715630A1ABF43F800CBD1DC /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A71563071ABF43DA00CBD1DC /* QuartzCore.framework */; };
 		A715630C1ABF535800CBD1DC /* AppIcon.icns in Resources */ = {isa = PBXBuildFile; fileRef = A715630B1ABF535800CBD1DC /* AppIcon.icns */; };
+		A71726B11ABFCD54007DE3E2 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A71726B01ABFCD54007DE3E2 /* QuartzCore.framework */; };
 		A74B92B11ABE5F2B00AB08CE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A74B92B01ABE5F2B00AB08CE /* AppDelegate.m */; };
 		A74B92B31ABE5F2B00AB08CE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A74B92B21ABE5F2B00AB08CE /* main.m */; };
 		A74B92B51ABE5F2B00AB08CE /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A74B92B41ABE5F2B00AB08CE /* Images.xcassets */; };
 		A74B92B81ABE5F2B00AB08CE /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = A74B92B61ABE5F2B00AB08CE /* MainMenu.xib */; };
 		A74B92C41ABE5F2B00AB08CE /* CATweakerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A74B92C31ABE5F2B00AB08CE /* CATweakerTests.m */; };
 		A74B92D11ABE602900AB08CE /* CurveView.m in Sources */ = {isa = PBXBuildFile; fileRef = A74B92D01ABE602900AB08CE /* CurveView.m */; };
+		A75512811ABFD79000D1424E /* CATFrameView.m in Sources */ = {isa = PBXBuildFile; fileRef = A75512801ABFD79000D1424E /* CATFrameView.m */; };
+		A791F74B1ABFDBF20020F9FD /* NSBezierPath+LXExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = A791F74A1ABFDBF20020F9FD /* NSBezierPath+LXExtension.m */; };
+		A79597A31ABFBD8C00B7EFE2 /* CATweakerHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = A79597A21ABFBD8C00B7EFE2 /* CATweakerHelper.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,6 +37,7 @@
 		A71563001ABF402800CBD1DC /* DemoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DemoView.m; sourceTree = "<group>"; };
 		A71563071ABF43DA00CBD1DC /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		A715630B1ABF535800CBD1DC /* AppIcon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = AppIcon.icns; sourceTree = SOURCE_ROOT; };
+		A71726B01ABFCD54007DE3E2 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/QuartzCore.framework; sourceTree = DEVELOPER_DIR; };
 		A74B92AA1ABE5F2B00AB08CE /* CATweaker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CATweaker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A74B92AE1ABE5F2B00AB08CE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A74B92AF1ABE5F2B00AB08CE /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -46,6 +51,14 @@
 		A74B92CD1ABE5F9400AB08CE /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
 		A74B92CF1ABE602900AB08CE /* CurveView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CurveView.h; sourceTree = "<group>"; };
 		A74B92D01ABE602900AB08CE /* CurveView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CurveView.m; sourceTree = "<group>"; };
+		A755127F1ABFD79000D1424E /* CATFrameView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CATFrameView.h; sourceTree = "<group>"; };
+		A75512801ABFD79000D1424E /* CATFrameView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CATFrameView.m; sourceTree = "<group>"; };
+		A791F7491ABFDBF20020F9FD /* NSBezierPath+LXExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSBezierPath+LXExtension.h"; sourceTree = "<group>"; };
+		A791F74A1ABFDBF20020F9FD /* NSBezierPath+LXExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSBezierPath+LXExtension.m"; sourceTree = "<group>"; };
+		A79597971ABFB4D400B7EFE2 /* CATweakerSense.xcplugin */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CATweakerSense.xcplugin; sourceTree = BUILT_PRODUCTS_DIR; };
+		A795979A1ABFB4D400B7EFE2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A79597A11ABFBD8C00B7EFE2 /* CATweakerHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CATweakerHelper.h; sourceTree = "<group>"; };
+		A79597A21ABFBD8C00B7EFE2 /* CATweakerHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CATweakerHelper.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +77,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		A79597941ABFB4D400B7EFE2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A71726B11ABFCD54007DE3E2 /* QuartzCore.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -79,7 +100,9 @@
 		A74B92A11ABE5F2B00AB08CE = {
 			isa = PBXGroup;
 			children = (
+				A74B92CD1ABE5F9400AB08CE /* README.md */,
 				A74B92AC1ABE5F2B00AB08CE /* CATweaker */,
+				A79597981ABFB4D400B7EFE2 /* CATweakerSense */,
 				A74B92C01ABE5F2B00AB08CE /* CATweakerTests */,
 				A74B92AB1ABE5F2B00AB08CE /* Products */,
 			);
@@ -90,6 +113,7 @@
 			children = (
 				A74B92AA1ABE5F2B00AB08CE /* CATweaker.app */,
 				A74B92BD1ABE5F2B00AB08CE /* CATweakerTests.xctest */,
+				A79597971ABFB4D400B7EFE2 /* CATweakerSense.xcplugin */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -115,7 +139,6 @@
 			isa = PBXGroup;
 			children = (
 				A715630B1ABF535800CBD1DC /* AppIcon.icns */,
-				A74B92CD1ABE5F9400AB08CE /* README.md */,
 				A74B92AE1ABE5F2B00AB08CE /* Info.plist */,
 				A74B92B21ABE5F2B00AB08CE /* main.m */,
 			);
@@ -135,6 +158,29 @@
 			isa = PBXGroup;
 			children = (
 				A74B92C21ABE5F2B00AB08CE /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A79597981ABFB4D400B7EFE2 /* CATweakerSense */ = {
+			isa = PBXGroup;
+			children = (
+				A71726B01ABFCD54007DE3E2 /* QuartzCore.framework */,
+				A791F7491ABFDBF20020F9FD /* NSBezierPath+LXExtension.h */,
+				A791F74A1ABFDBF20020F9FD /* NSBezierPath+LXExtension.m */,
+				A79597A11ABFBD8C00B7EFE2 /* CATweakerHelper.h */,
+				A79597A21ABFBD8C00B7EFE2 /* CATweakerHelper.m */,
+				A755127F1ABFD79000D1424E /* CATFrameView.h */,
+				A75512801ABFD79000D1424E /* CATFrameView.m */,
+				A79597991ABFB4D400B7EFE2 /* Supporting Files */,
+			);
+			path = CATweakerSense;
+			sourceTree = "<group>";
+		};
+		A79597991ABFB4D400B7EFE2 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				A795979A1ABFB4D400B7EFE2 /* Info.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -177,6 +223,23 @@
 			productReference = A74B92BD1ABE5F2B00AB08CE /* CATweakerTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		A79597961ABFB4D400B7EFE2 /* CATweakerSense */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A795979D1ABFB4D400B7EFE2 /* Build configuration list for PBXNativeTarget "CATweakerSense" */;
+			buildPhases = (
+				A79597931ABFB4D400B7EFE2 /* Sources */,
+				A79597941ABFB4D400B7EFE2 /* Frameworks */,
+				A79597951ABFB4D400B7EFE2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CATweakerSense;
+			productName = CATweakerSense;
+			productReference = A79597971ABFB4D400B7EFE2 /* CATweakerSense.xcplugin */;
+			productType = "com.apple.product-type.bundle";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -192,6 +255,9 @@
 					A74B92BC1ABE5F2B00AB08CE = {
 						CreatedOnToolsVersion = 6.2;
 						TestTargetID = A74B92A91ABE5F2B00AB08CE;
+					};
+					A79597961ABFB4D400B7EFE2 = {
+						CreatedOnToolsVersion = 6.2;
 					};
 				};
 			};
@@ -209,6 +275,7 @@
 			projectRoot = "";
 			targets = (
 				A74B92A91ABE5F2B00AB08CE /* CATweaker */,
+				A79597961ABFB4D400B7EFE2 /* CATweakerSense */,
 				A74B92BC1ABE5F2B00AB08CE /* CATweakerTests */,
 			);
 		};
@@ -226,6 +293,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		A74B92BB1ABE5F2B00AB08CE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A79597951ABFB4D400B7EFE2 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -251,6 +325,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				A74B92C41ABE5F2B00AB08CE /* CATweakerTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A79597931ABFB4D400B7EFE2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A79597A31ABFBD8C00B7EFE2 /* CATweakerHelper.m in Sources */,
+				A791F74B1ABFDBF20020F9FD /* NSBezierPath+LXExtension.m in Sources */,
+				A75512811ABFD79000D1424E /* CATFrameView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -355,6 +439,7 @@
 		A74B92C81ABE5F2B00AB08CE /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = CATweaker/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
@@ -365,6 +450,7 @@
 		A74B92C91ABE5F2B00AB08CE /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = CATweaker/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
@@ -408,6 +494,51 @@
 			};
 			name = Release;
 		};
+		A795979B1ABFB4D400B7EFE2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEPLOYMENT_LOCATION = YES;
+				DEPLOYMENT_POSTPROCESSING = YES;
+				DSTROOT = "$(HOME)";
+				GCC_ENABLE_OBJC_GC = unsupported;
+				GCC_MODEL_TUNING = G5;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = CATweakerSense/Info.plist;
+				INSTALL_PATH = "/Library/Application Support/Developer/Shared/Xcode/Plug-ins";
+				LD_RUNPATH_SEARCH_PATHS = /Developer;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx10.9;
+				SKIP_INSTALL = NO;
+				WRAPPER_EXTENSION = xcplugin;
+			};
+			name = Debug;
+		};
+		A795979C1ABFB4D400B7EFE2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEPLOYMENT_LOCATION = YES;
+				DEPLOYMENT_POSTPROCESSING = YES;
+				DSTROOT = "$(HOME)";
+				GCC_MODEL_TUNING = G5;
+				INFOPLIST_FILE = CATweakerSense/Info.plist;
+				INSTALL_PATH = "/Library/Application Support/Developer/Shared/Xcode/Plug-ins";
+				LD_RUNPATH_SEARCH_PATHS = /Developer;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx10.9;
+				SKIP_INSTALL = NO;
+				WRAPPER_EXTENSION = xcplugin;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -434,6 +565,15 @@
 			buildConfigurations = (
 				A74B92CB1ABE5F2B00AB08CE /* Debug */,
 				A74B92CC1ABE5F2B00AB08CE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A795979D1ABFB4D400B7EFE2 /* Build configuration list for PBXNativeTarget "CATweakerSense" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A795979B1ABFB4D400B7EFE2 /* Debug */,
+				A795979C1ABFB4D400B7EFE2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

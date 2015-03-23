@@ -9,6 +9,11 @@
 			<key>orderHint</key>
 			<integer>0</integer>
 		</dict>
+		<key>CATweakerSense.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
@@ -18,6 +23,11 @@
 			<true/>
 		</dict>
 		<key>A74B92BC1ABE5F2B00AB08CE</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>A79597961ABFB4D400B7EFE2</key>
 		<dict>
 			<key>primary</key>
 			<true/>

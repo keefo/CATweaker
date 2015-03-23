@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>en</string>
+	<key>CFBundleExecutable</key>
+	<string>$(EXECUTABLE_NAME)</string>
+	<key>CFBundleIdentifier</key>
+	<string>com.beyondcow.$(PRODUCT_NAME:rfc1034identifier)</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundleName</key>
+	<string>$(PRODUCT_NAME)</string>
+	<key>CFBundlePackageType</key>
+	<string>BNDL</string>
+	<key>CFBundleShortVersionString</key>
+	<string>${CURRENT_PROJECT_VERSION}</string>
+	<key>CFBundleVersion</key>
+	<string>${CURRENT_PROJECT_VERSION}</string>
+	<key>NSHumanReadableCopyright</key>
+	<string>Copyright © 2015 Beyondcow. All rights reserved.</string>
+	<key>NSPrincipalClass</key>
+	<string>CATweakerHelper</string>
+	<key>DVTPlugInCompatibilityUUIDs</key>
+	<array>
+		<string>C4A681B0-4A26-480E-93EC-1218098B9AA0</string>
+		<string>AD68E85B-441B-4301-B564-A45E4919A6AD</string>
+		<string>640F884E-CE55-4B40-87C0-8869546CAB7A</string>
+		<string>63FC1C47-140D-42B0-BB4D-A10B2D225574</string>
+		<string>37B30044-3B14-46BA-ABAA-F01000C27B63</string>
+		<string>A2E4D43F-41F4-4FB9-BB94-7177011C9AED</string>
+		<string>A16FF353-8441-459E-A50C-B071F53F51B7</string>
+	</array>
+	<key>XC4Compatible</key>
+	<true/>
+	<key>XCPluginHasUI</key>
+	<false/>
+	<key>XCGCReady</key>
+	<true/>
+</dict>
+</plist>
