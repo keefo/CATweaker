@@ -18,7 +18,7 @@ CATweakerSense is an Xcode plugin that makes working with `CAMediaTimingFunction
 
 You might use [ColorSense](https://github.com/omz/ColorSense-for-Xcode) before. It let you pick up a color right from Xcode caret.
 
-CATweakerSense is like CATweakerSense, but it let you pick a CAMediaTimingFunction. When you put the caret on one of your CAMediaTimingFunction, it automatically shows the actual time curve as an overlay, and you can even adjust it on-the-fly with the curve adjuster.
+CATweakerSense is like ColorSense, but it lets you pick a CAMediaTimingFunction curve. When you put the caret on one of your CAMediaTimingFunction, it automatically shows the actual time curve as an overlay, and you can even adjust it on-the-fly with the curve adjuster.
 
 The plugin also adds some items to the _Edit_ menu to enable and to disable CATweakerSense temporarily. These menu items have no keyboard shortcuts by default, but you can set them via the system's keyboard preferences (Xcode's own preferences won't show them).
 
