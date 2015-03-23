@@ -52,7 +52,7 @@ This work is derived from the awesome [ColorSense](https://github.com/omz/ColorS
 
 **Xu Lian**
 
-I'm a Mac and iOS developer, the funder of  [Beyondcow](https://www.beyondcow.com), follow me on Twitter or Github.
+I'm a Mac and iOS developer, the founder of  [Beyondcow](https://www.beyondcow.com), follow me on Twitter or Github.
 
 - <https://twitter.com/lianxu>
 - <https://github.com/keefo>
