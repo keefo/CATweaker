@@ -48,7 +48,7 @@ I am planing to bring keyFrame animation into this plugin. So one can create mor
 
 This work is derived from the awesome [ColorSense](https://github.com/omz/ColorSense-for-Xcode) plugin of Ole Zorn([@olemoritz](http://twitter.com/olemoritz)). Thanks Ole!
 
-## Creator
+## Author
 
 **Xu Lian**
 
