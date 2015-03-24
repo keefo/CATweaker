@@ -76,14 +76,14 @@
 		A786158B1AC1204000B2E133 /* CATweakerSense */ = {
 			isa = PBXGroup;
 			children = (
+				A786159F1AC1208300B2E133 /* NSBezierPath+LXExtension.h */,
+				A78615A01AC1208300B2E133 /* NSBezierPath+LXExtension.m */,
 				A78615991AC1208300B2E133 /* CATCurveView.h */,
 				A786159A1AC1208300B2E133 /* CATCurveView.m */,
 				A786159B1AC1208300B2E133 /* CATFrameView.h */,
 				A786159C1AC1208300B2E133 /* CATFrameView.m */,
 				A786159D1AC1208300B2E133 /* CATweakerHelper.h */,
 				A786159E1AC1208300B2E133 /* CATweakerHelper.m */,
-				A786159F1AC1208300B2E133 /* NSBezierPath+LXExtension.h */,
-				A78615A01AC1208300B2E133 /* NSBezierPath+LXExtension.m */,
 				A786158C1AC1204000B2E133 /* Supporting Files */,
 			);
 			path = CATweakerSense;

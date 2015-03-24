@@ -26,7 +26,7 @@
     [super tearDown];
 }
 
-- (void)testExample {
+- (void)testTimingFunctionWithNameRegex {
     // This is an example of a functional test case.
     
     CATweakerHelper *helper = [[CATweakerHelper alloc] init];

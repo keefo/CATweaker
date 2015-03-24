@@ -25,9 +25,8 @@
     [super tearDown];
 }
 
-- (void)testTimingFunctionWithNameRegex {
+- (void)testSomething {
     
-    // testing TimingFunctionWithNameRegex.
 
 }
 
