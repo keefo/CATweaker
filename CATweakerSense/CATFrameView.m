@@ -13,6 +13,11 @@
 
 @implementation CurveViewController
 
+- (void)loadView
+{
+    //overwirte this, cause we do not need load view from xib
+    //[super loadView];
+}
 
 @end
 
