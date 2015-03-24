@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "A79597961ABFB4D400B7EFE2"
+               BlueprintIdentifier = "A78615881AC1204000B2E133"
                BuildableName = "CATweakerSense.xcplugin"
                BlueprintName = "CATweakerSense"
-               ReferencedContainer = "container:CATweaker.xcodeproj">
+               ReferencedContainer = "container:CATweakerSense.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -38,15 +38,14 @@
       buildConfiguration = "Debug"
       ignoresPersistentStateOnLaunch = "NO"
       debugDocumentVersioning = "YES"
-      allowLocationSimulation = "YES"
-      viewDebuggingEnabled = "No">
+      allowLocationSimulation = "YES">
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "A79597961ABFB4D400B7EFE2"
+            BlueprintIdentifier = "A78615881AC1204000B2E133"
             BuildableName = "CATweakerSense.xcplugin"
             BlueprintName = "CATweakerSense"
-            ReferencedContainer = "container:CATweaker.xcodeproj">
+            ReferencedContainer = "container:CATweakerSense.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -61,10 +60,10 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "A79597961ABFB4D400B7EFE2"
+            BlueprintIdentifier = "A78615881AC1204000B2E133"
             BuildableName = "CATweakerSense.xcplugin"
             BlueprintName = "CATweakerSense"
-            ReferencedContainer = "container:CATweaker.xcodeproj">
+            ReferencedContainer = "container:CATweakerSense.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </ProfileAction>

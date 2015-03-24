@@ -9,42 +9,14 @@
          <BuildActionEntry
             buildForTesting = "YES"
             buildForRunning = "YES"
-            buildForProfiling = "YES"
-            buildForArchiving = "YES"
-            buildForAnalyzing = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "A74B92A91ABE5F2B00AB08CE"
-               BuildableName = "CATweaker.app"
-               BlueprintName = "CATweaker"
-               ReferencedContainer = "container:CATweaker.xcodeproj">
-            </BuildableReference>
-         </BuildActionEntry>
-         <BuildActionEntry
-            buildForTesting = "YES"
-            buildForRunning = "YES"
             buildForProfiling = "NO"
             buildForArchiving = "NO"
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "A74B92BC1ABE5F2B00AB08CE"
-               BuildableName = "CATweakerTests.xctest"
-               BlueprintName = "CATweakerTests"
-               ReferencedContainer = "container:CATweaker.xcodeproj">
-            </BuildableReference>
-         </BuildActionEntry>
-         <BuildActionEntry
-            buildForTesting = "YES"
-            buildForRunning = "YES"
-            buildForProfiling = "YES"
-            buildForArchiving = "YES"
-            buildForAnalyzing = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "A78615881AC1204000B2E133"
-               BuildableName = "CATweakerSense.xcplugin"
-               BlueprintName = "CATweakerSense"
+               BlueprintIdentifier = "A78615AA1AC121AF00B2E133"
+               BuildableName = "CATweakerSenseTests.xctest"
+               BlueprintName = "CATweakerSenseTests"
                ReferencedContainer = "container:CATweakerSense.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -60,20 +32,20 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "A74B92BC1ABE5F2B00AB08CE"
-               BuildableName = "CATweakerTests.xctest"
-               BlueprintName = "CATweakerTests"
-               ReferencedContainer = "container:CATweaker.xcodeproj">
+               BlueprintIdentifier = "A78615AA1AC121AF00B2E133"
+               BuildableName = "CATweakerSenseTests.xctest"
+               BlueprintName = "CATweakerSenseTests"
+               ReferencedContainer = "container:CATweakerSense.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "A74B92A91ABE5F2B00AB08CE"
-            BuildableName = "CATweaker.app"
-            BlueprintName = "CATweaker"
-            ReferencedContainer = "container:CATweaker.xcodeproj">
+            BlueprintIdentifier = "A78615AA1AC121AF00B2E133"
+            BuildableName = "CATweakerSenseTests.xctest"
+            BlueprintName = "CATweakerSenseTests"
+            ReferencedContainer = "container:CATweakerSense.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </TestAction>
@@ -86,16 +58,15 @@
       ignoresPersistentStateOnLaunch = "NO"
       debugDocumentVersioning = "YES"
       allowLocationSimulation = "YES">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
+      <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "A74B92A91ABE5F2B00AB08CE"
-            BuildableName = "CATweaker.app"
-            BlueprintName = "CATweaker"
-            ReferencedContainer = "container:CATweaker.xcodeproj">
+            BlueprintIdentifier = "A78615AA1AC121AF00B2E133"
+            BuildableName = "CATweakerSenseTests.xctest"
+            BlueprintName = "CATweakerSenseTests"
+            ReferencedContainer = "container:CATweakerSense.xcodeproj">
          </BuildableReference>
-      </BuildableProductRunnable>
+      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>
@@ -105,16 +76,15 @@
       useCustomWorkingDirectory = "NO"
       buildConfiguration = "Release"
       debugDocumentVersioning = "YES">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
+      <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "A74B92A91ABE5F2B00AB08CE"
-            BuildableName = "CATweaker.app"
-            BlueprintName = "CATweaker"
-            ReferencedContainer = "container:CATweaker.xcodeproj">
+            BlueprintIdentifier = "A78615AA1AC121AF00B2E133"
+            BuildableName = "CATweakerSenseTests.xctest"
+            BlueprintName = "CATweakerSenseTests"
+            ReferencedContainer = "container:CATweakerSense.xcodeproj">
          </BuildableReference>
-      </BuildableProductRunnable>
+      </MacroExpansion>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">

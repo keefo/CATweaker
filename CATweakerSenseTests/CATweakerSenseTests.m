@@ -1,8 +1,8 @@
 //
-//  CATweakerTests.m
-//  CATweakerTests
+//  CATweakerSenseTests.m
+//  CATweakerSenseTests
 //
-//  Created by X on 2015-03-21.
+//  Created by X on 2015-03-23.
 //  Copyright (c) 2015 Beyondcow. All rights reserved.
 //
 
@@ -10,11 +10,11 @@
 #import <XCTest/XCTest.h>
 #import "CATweakerHelper.h"
 
-@interface CATweakerTests : XCTestCase
+@interface CATweakerSenseTests : XCTestCase
 
 @end
 
-@implementation CATweakerTests
+@implementation CATweakerSenseTests
 
 - (void)setUp {
     [super setUp];
@@ -26,10 +26,9 @@
     [super tearDown];
 }
 
-- (void)testTimingFunctionWithNameRegex {
+- (void)testExample {
+    // This is an example of a functional test case.
     
-    // testing TimingFunctionWithNameRegex.
-
     CATweakerHelper *helper = [[CATweakerHelper alloc] init];
     
     NSMutableArray *textArray = [NSMutableArray array];
@@ -84,7 +83,7 @@
     if (pass!=textArray.count) {
         XCTFail(@"not pass");
     }
-
+    
     
     textArray = [NSMutableArray array];
     [textArray addObject:@"[CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseOut]"];
@@ -110,7 +109,7 @@
     if (pass!=textArray.count) {
         XCTFail(@"not pass");
     }
-
+    
     
     textArray = [NSMutableArray array];
     [textArray addObject:@"[CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut]"];
@@ -165,11 +164,11 @@
 
 }
 
-//- (void)testPerformanceExample {
-//    // This is an example of a performance test case.
-//    [self measureBlock:^{
-//        // Put the code you want to measure the time of here.
-//    }];
-//}
+- (void)testPerformanceExample {
+    // This is an example of a performance test case.
+    [self measureBlock:^{
+        // Put the code you want to measure the time of here.
+    }];
+}
 
 @end

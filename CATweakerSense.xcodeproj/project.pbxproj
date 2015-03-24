@@ -1,0 +1,412 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A78615A11AC1208300B2E133 /* CATCurveView.m in Sources */ = {isa = PBXBuildFile; fileRef = A786159A1AC1208300B2E133 /* CATCurveView.m */; };
+		A78615A21AC1208300B2E133 /* CATFrameView.m in Sources */ = {isa = PBXBuildFile; fileRef = A786159C1AC1208300B2E133 /* CATFrameView.m */; };
+		A78615A31AC1208300B2E133 /* CATweakerHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = A786159E1AC1208300B2E133 /* CATweakerHelper.m */; };
+		A78615A41AC1208300B2E133 /* NSBezierPath+LXExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = A78615A01AC1208300B2E133 /* NSBezierPath+LXExtension.m */; };
+		A78615A61AC120FE00B2E133 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A78615A51AC120FE00B2E133 /* QuartzCore.framework */; };
+		A78615B01AC121AF00B2E133 /* CATweakerSenseTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A78615AF1AC121AF00B2E133 /* CATweakerSenseTests.m */; };
+		A78615B41AC121D200B2E133 /* CATweakerHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = A786159E1AC1208300B2E133 /* CATweakerHelper.m */; };
+		A78615B51AC121D400B2E133 /* CATFrameView.m in Sources */ = {isa = PBXBuildFile; fileRef = A786159C1AC1208300B2E133 /* CATFrameView.m */; };
+		A78615B61AC121D600B2E133 /* CATCurveView.m in Sources */ = {isa = PBXBuildFile; fileRef = A786159A1AC1208300B2E133 /* CATCurveView.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		A78615891AC1204000B2E133 /* CATweakerSense.xcplugin */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CATweakerSense.xcplugin; sourceTree = BUILT_PRODUCTS_DIR; };
+		A786158D1AC1204000B2E133 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A78615991AC1208300B2E133 /* CATCurveView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CATCurveView.h; sourceTree = "<group>"; };
+		A786159A1AC1208300B2E133 /* CATCurveView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CATCurveView.m; sourceTree = "<group>"; };
+		A786159B1AC1208300B2E133 /* CATFrameView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CATFrameView.h; sourceTree = "<group>"; };
+		A786159C1AC1208300B2E133 /* CATFrameView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CATFrameView.m; sourceTree = "<group>"; };
+		A786159D1AC1208300B2E133 /* CATweakerHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CATweakerHelper.h; sourceTree = "<group>"; };
+		A786159E1AC1208300B2E133 /* CATweakerHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CATweakerHelper.m; sourceTree = "<group>"; };
+		A786159F1AC1208300B2E133 /* NSBezierPath+LXExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSBezierPath+LXExtension.h"; sourceTree = "<group>"; };
+		A78615A01AC1208300B2E133 /* NSBezierPath+LXExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSBezierPath+LXExtension.m"; sourceTree = "<group>"; };
+		A78615A51AC120FE00B2E133 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		A78615AB1AC121AF00B2E133 /* CATweakerSenseTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CATweakerSenseTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A78615AE1AC121AF00B2E133 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A78615AF1AC121AF00B2E133 /* CATweakerSenseTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CATweakerSenseTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A78615861AC1204000B2E133 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A78615A61AC120FE00B2E133 /* QuartzCore.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A78615A81AC121AF00B2E133 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A78615801AC1204000B2E133 = {
+			isa = PBXGroup;
+			children = (
+				A78615A51AC120FE00B2E133 /* QuartzCore.framework */,
+				A786158B1AC1204000B2E133 /* CATweakerSense */,
+				A78615AC1AC121AF00B2E133 /* CATweakerSenseTests */,
+				A786158A1AC1204000B2E133 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A786158A1AC1204000B2E133 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A78615891AC1204000B2E133 /* CATweakerSense.xcplugin */,
+				A78615AB1AC121AF00B2E133 /* CATweakerSenseTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A786158B1AC1204000B2E133 /* CATweakerSense */ = {
+			isa = PBXGroup;
+			children = (
+				A78615991AC1208300B2E133 /* CATCurveView.h */,
+				A786159A1AC1208300B2E133 /* CATCurveView.m */,
+				A786159B1AC1208300B2E133 /* CATFrameView.h */,
+				A786159C1AC1208300B2E133 /* CATFrameView.m */,
+				A786159D1AC1208300B2E133 /* CATweakerHelper.h */,
+				A786159E1AC1208300B2E133 /* CATweakerHelper.m */,
+				A786159F1AC1208300B2E133 /* NSBezierPath+LXExtension.h */,
+				A78615A01AC1208300B2E133 /* NSBezierPath+LXExtension.m */,
+				A786158C1AC1204000B2E133 /* Supporting Files */,
+			);
+			path = CATweakerSense;
+			sourceTree = "<group>";
+		};
+		A786158C1AC1204000B2E133 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				A786158D1AC1204000B2E133 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A78615AC1AC121AF00B2E133 /* CATweakerSenseTests */ = {
+			isa = PBXGroup;
+			children = (
+				A78615AF1AC121AF00B2E133 /* CATweakerSenseTests.m */,
+				A78615AD1AC121AF00B2E133 /* Supporting Files */,
+			);
+			path = CATweakerSenseTests;
+			sourceTree = "<group>";
+		};
+		A78615AD1AC121AF00B2E133 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				A78615AE1AC121AF00B2E133 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A78615881AC1204000B2E133 /* CATweakerSense */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A78615901AC1204000B2E133 /* Build configuration list for PBXNativeTarget "CATweakerSense" */;
+			buildPhases = (
+				A78615851AC1204000B2E133 /* Sources */,
+				A78615861AC1204000B2E133 /* Frameworks */,
+				A78615871AC1204000B2E133 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CATweakerSense;
+			productName = CATweakerSense;
+			productReference = A78615891AC1204000B2E133 /* CATweakerSense.xcplugin */;
+			productType = "com.apple.product-type.bundle";
+		};
+		A78615AA1AC121AF00B2E133 /* CATweakerSenseTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A78615B11AC121AF00B2E133 /* Build configuration list for PBXNativeTarget "CATweakerSenseTests" */;
+			buildPhases = (
+				A78615A71AC121AF00B2E133 /* Sources */,
+				A78615A81AC121AF00B2E133 /* Frameworks */,
+				A78615A91AC121AF00B2E133 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CATweakerSenseTests;
+			productName = CATweakerSenseTests;
+			productReference = A78615AB1AC121AF00B2E133 /* CATweakerSenseTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A78615811AC1204000B2E133 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0620;
+				ORGANIZATIONNAME = Beyondcow;
+				TargetAttributes = {
+					A78615881AC1204000B2E133 = {
+						CreatedOnToolsVersion = 6.2;
+					};
+					A78615AA1AC121AF00B2E133 = {
+						CreatedOnToolsVersion = 6.2;
+					};
+				};
+			};
+			buildConfigurationList = A78615841AC1204000B2E133 /* Build configuration list for PBXProject "CATweakerSense" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = A78615801AC1204000B2E133;
+			productRefGroup = A786158A1AC1204000B2E133 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A78615881AC1204000B2E133 /* CATweakerSense */,
+				A78615AA1AC121AF00B2E133 /* CATweakerSenseTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A78615871AC1204000B2E133 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A78615A91AC121AF00B2E133 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A78615851AC1204000B2E133 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A78615A41AC1208300B2E133 /* NSBezierPath+LXExtension.m in Sources */,
+				A78615A11AC1208300B2E133 /* CATCurveView.m in Sources */,
+				A78615A31AC1208300B2E133 /* CATweakerHelper.m in Sources */,
+				A78615A21AC1208300B2E133 /* CATFrameView.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A78615A71AC121AF00B2E133 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A78615B01AC121AF00B2E133 /* CATweakerSenseTests.m in Sources */,
+				A78615B41AC121D200B2E133 /* CATweakerHelper.m in Sources */,
+				A78615B51AC121D400B2E133 /* CATFrameView.m in Sources */,
+				A78615B61AC121D600B2E133 /* CATCurveView.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		A786158E1AC1204000B2E133 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		A786158F1AC1204000B2E133 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		A78615911AC1204000B2E133 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEPLOYMENT_LOCATION = YES;
+				DEPLOYMENT_POSTPROCESSING = YES;
+				DSTROOT = "$(HOME)";
+				GCC_ENABLE_OBJC_GC = unsupported;
+				GCC_MODEL_TUNING = G5;
+				INFOPLIST_FILE = CATweakerSense/Info.plist;
+				INSTALL_PATH = "/Library/Application Support/Developer/Shared/Xcode/Plug-ins";
+				LD_RUNPATH_SEARCH_PATHS = /Developer;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = NO;
+				STRIP_INSTALLED_PRODUCT = NO;
+				WRAPPER_EXTENSION = xcplugin;
+			};
+			name = Debug;
+		};
+		A78615921AC1204000B2E133 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEPLOYMENT_LOCATION = YES;
+				DEPLOYMENT_POSTPROCESSING = YES;
+				DSTROOT = "$(HOME)";
+				GCC_MODEL_TUNING = G5;
+				INFOPLIST_FILE = CATweakerSense/Info.plist;
+				INSTALL_PATH = "/Library/Application Support/Developer/Shared/Xcode/Plug-ins";
+				LD_RUNPATH_SEARCH_PATHS = /Developer;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = NO;
+				STRIP_INSTALLED_PRODUCT = NO;
+				WRAPPER_EXTENSION = xcplugin;
+			};
+			name = Release;
+		};
+		A78615B21AC121AF00B2E133 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = CATweakerSenseTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		A78615B31AC121AF00B2E133 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = CATweakerSenseTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A78615841AC1204000B2E133 /* Build configuration list for PBXProject "CATweakerSense" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A786158E1AC1204000B2E133 /* Debug */,
+				A786158F1AC1204000B2E133 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A78615901AC1204000B2E133 /* Build configuration list for PBXNativeTarget "CATweakerSense" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A78615911AC1204000B2E133 /* Debug */,
+				A78615921AC1204000B2E133 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A78615B11AC121AF00B2E133 /* Build configuration list for PBXNativeTarget "CATweakerSenseTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A78615B21AC121AF00B2E133 /* Debug */,
+				A78615B31AC121AF00B2E133 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A78615811AC1204000B2E133 /* Project object */;
+}
