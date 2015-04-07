@@ -46,10 +46,13 @@ This is tested on:
 ## Limitations
 
 * It only works for constant point value, something like `[CAMediaTimingFunction functionWithControlPoints: abc/def : 0.1 : 0.15 : 0.9];` won't work.
+* It only works for Objective-C code. Swift support is in todo list.
 
 ## Next move
 
 I am planing to bring keyFrame animation into this plugin. So one can create more complex animation like "spring", "decay", "along path" through the popover adjuster. If you have some great ideas, I am more than happy to hear from you.
+Swift language support.
+
 
 ## Credits
 
