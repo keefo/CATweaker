@@ -42,6 +42,7 @@ This is tested on:
 
 * OS X 10.9.2 with Xcode 6.2
 * OS X 10.10.3 with Xcode 6.2
+* OS X 10.11 with Xcode 7.0.1
 
 ## Limitations
 

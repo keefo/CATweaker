@@ -168,7 +168,7 @@
                 }
                 
                 NSRange selectedFunctionRange = NSMakeRange(functionRange.location + lineRange.location, functionRange.length);
-                 NSRect selectionRectOnScreen = [self.textView firstRectForCharacterRange:selectedFunctionRange actualRange:NULL];
+                NSRect selectionRectOnScreen = [self.textView firstRectForCharacterRange:selectedFunctionRange actualRange:NULL];
                 NSRect selectionRectInWindow = [self.textView.window convertRectFromScreen:selectionRectOnScreen];
                 NSRect selectionRectInView = [self.textView convertRect:selectionRectInWindow fromView:nil];
                 
@@ -176,7 +176,7 @@
                 catFrameView.frame = NSInsetRect(NSIntegralRect(selectionRectInView), -1, -1);
                 catFrameView.frame = NSMakeRect(catFrameView.frame.origin.x, catFrameView.frame.origin.y-catFrameView.buttonHeight, catFrameView.frame.size.width, catFrameView.frame.size.height+catFrameView.buttonHeight);
                 catFrameView.timingFunction = matchedFunction;
-                [catFrameView closePopover];
+                //[catFrameView closePopover];
                 
                 [self.textView addSubview:catFrameView];
                 
